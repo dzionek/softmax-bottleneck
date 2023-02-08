@@ -1,6 +1,8 @@
 import os
 
+import matplotlib
 import matplotlib.pyplot as plt
+matplotlib.use('Agg')
 
 def save_stats(args, stats):
     if not os.path.exists('experiments'):
