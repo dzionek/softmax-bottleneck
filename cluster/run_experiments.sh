@@ -7,7 +7,7 @@ for model in "${MODELS[@]}"
 do
   for d in "${DS[@]}"
   do
-    NAME='${model}_${d}'
+    NAME="${model}_${d}"
     if test -f "experiments/$NAME"; then
       echo "Skipping. $NAME already exists."
     else
