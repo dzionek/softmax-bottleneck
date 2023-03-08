@@ -7,11 +7,11 @@ for model in "${MODELS[@]}"
 do
   for d in "${DS[@]}"
   do
-    FILE=/etc/resolv.conf
-    if test -f "experiments/${model}_${d}"; then
-      echo "Skipping. $FILE already exists."
+    NAME='${model}_${d}'
+    if test -f "experiments/$NAME"; then
+      echo "Skipping. $NAME already exists."
     else
-      echo "$FILE does not exist"
+      echo "$NAME does not exist"
 #      printf "#!/bin/bash\n/usr/bin/python main.py ${model}_${d} mnist $model -c cuda -e 30 -d $d" >> ${model}_${d}.sh
 #      sbatch --time=08:00:00 --gres=gpu:1 ${model}_${d}.sh
 #      rm -rf ${model}_${d}.sh
