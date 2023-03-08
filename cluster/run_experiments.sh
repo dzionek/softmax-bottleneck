@@ -11,10 +11,9 @@ do
     if test -f "experiments/$NAME"; then
       echo "Skipping. $NAME already exists."
     else
-      echo "$NAME does not exist"
-#      printf "#!/bin/bash\n/usr/bin/python main.py ${model}_${d} mnist $model -c cuda -e 30 -d $d" >> ${model}_${d}.sh
-#      sbatch --time=08:00:00 --gres=gpu:1 ${model}_${d}.sh
-#      rm -rf ${model}_${d}.sh
+      printf "#!/bin/bash\n/usr/bin/python main.py ${model}_${d} mnist $model -c cuda -e 30 -d $d" >> ${model}_${d}.sh
+      sbatch --time=08:00:00 --gres=gpu:1 ${model}_${d}.sh
+      rm -rf ${model}_${d}.sh
     fi
   done
 done
