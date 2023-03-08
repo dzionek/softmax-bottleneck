@@ -1,7 +1,8 @@
 ##!/bin/bash
-MODELS=('softmax' 'sigsoftmax' 'plif')
-DS=('128' '5' '3')
+MODELS=('softmax' 'mos' 'sigsoftmax' 'moss' 'plif')
+DS=('128' '9' '8' '7' '6' '5' '4' '3' '2' '1')
 
+# Run MNIST
 for model in "${MODELS[@]}"
 do
   for d in "${DS[@]}"

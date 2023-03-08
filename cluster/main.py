@@ -10,14 +10,14 @@ parser = argparse.ArgumentParser(
 parser.add_argument('experiment_name')
 parser.add_argument('dataset', choices=['mnist'])
 parser.add_argument('activation', choices=[
-    'softmax', 'sigsoftmax', 'plif'])
+    'softmax', 'mos', 'sigsoftmax', 'moss', 'plif'])
 parser.add_argument('-c', '--compute',
                     choices=['mps', 'cpu', 'cuda'], default='cpu')
 parser.add_argument('-e', '--epochs', type=int, default=1)
 parser.add_argument('-d', type=int, required=True)
 parser.add_argument('-b', '--batch_size', type=int, default=64)
 parser.add_argument('-t', '--test_batch_size', type=int, default=10000)
-parser.add_argument('-g', '--gamma', type=int, default=0.7)
+# parser.add_argument('-g', '--gamma', type=int, default=0.7)
 parser.add_argument('-s', '--seed', type=int, default=1)
 # parser.add_argument('--save_model', action='store_true')
 
