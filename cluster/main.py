@@ -1,8 +1,10 @@
 import argparse
+from collections import defaultdict
 
 from mnist import prepare_mnist
 from training import run_experiment
-from stats import save_stats
+from results import save_results
+from seeds import seeds
 
 parser = argparse.ArgumentParser(
     description='Runs experiments for the thesis')
@@ -18,13 +20,22 @@ parser.add_argument('-d', type=int, required=True)
 parser.add_argument('-b', '--batch_size', type=int, default=64)
 parser.add_argument('-t', '--test_batch_size', type=int, default=10000)
 # parser.add_argument('-g', '--gamma', type=int, default=0.7)
-parser.add_argument('-s', '--seed', type=int, default=1)
+parser.add_argument('-s', '--num_seeds', type=int, default=1)
 # parser.add_argument('--save_model', action='store_true')
 
 args = parser.parse_args()
 
+experiment = None
 if args.dataset.lower() == 'mnist':
     experiment = prepare_mnist(args.activation)
 
-stats = run_experiment(args, *experiment)
-save_stats(args, stats)
+results = defaultdict(list)
+for i, seed in enumerate(seeds[:args.num_seeds]):
+    print(f'For seed {i+1}/{args.num_seeds}')
+    stats = run_experiment(seed, args, *experiment)
+    print('')
+    for k, v in stats.items():
+        results[k].append(v)
+
+save_results(args, results)
+

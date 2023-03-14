@@ -122,7 +122,7 @@ class MixtureOfSigSoftmaxesNetwork(nn.Module):
     def sigsoftmax(self, logits):
         stable_logits = logits - torch.max(logits)
         unnormalized = torch.exp(stable_logits) * torch.sigmoid(logits)
-        return unnormalized / torch.sum(unnormalized)
+        return unnormalized / (torch.sum(unnormalized, dim=1, keepdim=True) + EPSILON)
 
     def forward(self, x):
         x = self.conv1(x)

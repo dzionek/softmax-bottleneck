@@ -3,7 +3,8 @@ import time
 import torch
 from torch.functional import F
 import torch.optim as optim
-from torch.optim.lr_scheduler import StepLR
+import numpy as np
+import random
 
 def train(args, model, device, train_loader, optimizer, epoch, stats):
     stats['log'].append(f'Train Epoch: {epoch}/{args.epochs}')
@@ -65,11 +66,13 @@ def test(model, device, train_loader, test_loader, stats):
     print(stats['log'][-1])
 
 
-def run_experiment(args, network, dataset1, dataset2):
+def run_experiment(seed, args, network, dataset1, dataset2):
+    torch.manual_seed(seed)
+    random.seed(seed)
+    np.random.seed(seed)
     stats = {
         'log': [str(vars(args))], 'train_loss': [], 'train_accuracy': [],
         'test_loss': [], 'test_accuracy': [], 'time': []}
-    torch.manual_seed(args.seed)
     device = torch.device(args.compute)
     stats['log'].append(f'Training a model on {args.dataset} using {device.type}'
                         f' and {args.activation} activation.')
@@ -94,7 +97,7 @@ def run_experiment(args, network, dataset1, dataset2):
         # scheduler.step()
 
     stats['log'].append(f'Done! Avg time per epoch {round(sum(stats["time"]) / args.epochs)}s.')
-    stats['log'].append(f'Done! Total time {round(sum(stats["time"])/60)} min.')
+    stats['log'].append(f'Total time {round(sum(stats["time"])/60)} min.')
     print(stats['log'][-1])
 
     return stats
