@@ -1,5 +1,6 @@
 import argparse
 from collections import defaultdict
+import os
 
 from mnist import prepare_mnist
 from training import run_experiment
@@ -21,9 +22,13 @@ parser.add_argument('-b', '--batch_size', type=int, default=64)
 parser.add_argument('-t', '--test_batch_size', type=int, default=10000)
 # parser.add_argument('-g', '--gamma', type=int, default=0.7)
 parser.add_argument('-s', '--num_seeds', type=int, default=1)
+parser.add_argument('--save_dir', default='experiments')
 # parser.add_argument('--save_model', action='store_true')
 
 args = parser.parse_args()
+
+if not os.path.exists(args.save_dir):
+    os.mkdir(args.save_dir)
 
 experiment = None
 if args.dataset.lower() == 'mnist':

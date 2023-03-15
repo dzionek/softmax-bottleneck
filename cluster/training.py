@@ -32,6 +32,7 @@ def test(model, device, train_loader, test_loader, stats):
     train_correct = 0
     test_loss = 0
     test_correct = 0
+    test_output = []
     with torch.no_grad():
         for data, target in train_loader:
             data, target = data.to(device), target.to(device)
@@ -45,6 +46,7 @@ def test(model, device, train_loader, test_loader, stats):
             output = model(data)
             batch_loss = F.nll_loss(output, target, reduction='sum').item()
             test_loss += batch_loss
+            test_output.append(torch.exp(output))
             pred = output.argmax(dim=1, keepdim=True)
             test_correct += pred.eq(target.view_as(pred)).sum().item()
 
@@ -64,6 +66,7 @@ def test(model, device, train_loader, test_loader, stats):
         f'Test set: Average loss: {stats["test_loss"][-1]}, '
         f'Accuracy: {test_correct}/{len(test_loader.dataset)} ({stats["test_accuracy"][-1]}%)')
     print(stats['log'][-1])
+    return test_output
 
 
 def run_experiment(seed, args, network, dataset1, dataset2):
@@ -72,7 +75,7 @@ def run_experiment(seed, args, network, dataset1, dataset2):
     np.random.seed(seed)
     stats = {
         'log': [str(vars(args))], 'train_loss': [], 'train_accuracy': [],
-        'test_loss': [], 'test_accuracy': [], 'time': []}
+        'test_loss': [], 'test_accuracy': [], 'rank': [], 'time': []}
     device = torch.device(args.compute)
     stats['log'].append(f'Training a model on {args.dataset} using {device.type}'
                         f' and {args.activation} activation.')
@@ -93,11 +96,14 @@ def run_experiment(seed, args, network, dataset1, dataset2):
     # scheduler = StepLR(optimizer, step_size=1, gamma=args.gamma)
     for epoch in range(1, args.epochs + 1):
         train(args, model, device, train_loader, optimizer, epoch, stats)
-        test(model, device, train_loader, test_loader, stats)
-        # scheduler.step()
+        test_output = test(model, device, train_loader, test_loader, stats)
+        rank = np.linalg.matrix_rank(test_output[0].cpu().data.numpy())
+        stats['rank'].append(rank)
+        stats['log'].append(f'Rank {rank}/{test_output[0].shape[1]}.')
+        print(stats['log'][-1])
 
     stats['log'].append(f'Done! Avg time per epoch {round(sum(stats["time"]) / args.epochs)}s.')
     stats['log'].append(f'Total time {round(sum(stats["time"])/60)} min.')
     print(stats['log'][-1])
-
+    # torch.save(model.state_dict(), f'{args.save_dir}/{args.experiment_name}.pt')
     return stats
