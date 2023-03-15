@@ -11,7 +11,7 @@ do
     if test -f "experiments/${NAME}_log"; then
       echo "Skipping. ${NAME} already exists."
     else
-      printf "#!/bin/bash\n/usr/bin/python main.py ${NAME} mnist $model -c cuda -e 40 -d $d -s 20" >> ${NAME}.sh
+      printf "#!/bin/bash\n/usr/bin/python main.py ${NAME} mnist $model -c cuda -e 40 -d $d -s 10" >> ${NAME}.sh
       sbatch --time=08:00:00 --gres=gpu:1 ${NAME}.sh
       rm -rf ${NAME}.sh
     fi
