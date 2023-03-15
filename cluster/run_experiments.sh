@@ -13,7 +13,7 @@ do
       echo "Skipping. ${NAME} already exists."
     else
       printf "#!/bin/bash\n/usr/bin/python main.py ${NAME} mnist $model -c cuda -e 40 -d $d -s 10 --save_dir ${EXPERIMENTS_MNIST_DIR}" >> ${NAME}.sh
-      sbatch --time=12:00:00 --gres=gpu:1 ${NAME}.sh
+      sbatch --time=7:00:00 --gres=gpu:1 ${NAME}.sh
       rm -rf ${NAME}.sh
     fi
   done

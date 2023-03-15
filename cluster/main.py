@@ -28,7 +28,7 @@ parser.add_argument('--save_dir', default='experiments')
 args = parser.parse_args()
 
 if not os.path.exists(args.save_dir):
-    os.mkdir(args.save_dir)
+    os.makedirs(args.save_dir, exist_ok=True)
 
 experiment = None
 if args.dataset.lower() == 'mnist':
