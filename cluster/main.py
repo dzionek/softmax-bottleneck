@@ -3,6 +3,7 @@ from collections import defaultdict
 import os
 
 from mnist import prepare_mnist
+from inaturalist import prepare_inat
 from training import run_experiment
 from results import save_results
 from seeds import seeds
@@ -11,7 +12,7 @@ parser = argparse.ArgumentParser(
     description='Runs experiments for the thesis')
 
 parser.add_argument('experiment_name')
-parser.add_argument('dataset', choices=['mnist'])
+parser.add_argument('dataset', choices=['mnist', 'inat'])
 parser.add_argument('activation', choices=[
     'softmax', 'mos', 'sigsoftmax', 'moss', 'plif'])
 parser.add_argument('-c', '--compute',
@@ -33,6 +34,8 @@ if not os.path.exists(args.save_dir):
 experiment = None
 if args.dataset.lower() == 'mnist':
     experiment = prepare_mnist(args.activation)
+elif args.dataset.lower() == 'inat':
+    experiment = prepare_inat(args.activation)
 
 results = defaultdict(list)
 for i, seed in enumerate(seeds[:args.num_seeds]):

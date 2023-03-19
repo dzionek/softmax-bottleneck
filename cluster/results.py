@@ -36,7 +36,7 @@ def save_results(args, results):
     ax2.set_ylabel('Accuracy')
     ax2.legend()
 
-    plt.savefig(f'{file_name}.png')
+    plt.savefig(f'{file_name}.png', bbox_inches='tight')
 
 
 

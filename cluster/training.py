@@ -13,6 +13,7 @@ def train(args, model, device, train_loader, optimizer, epoch, stats):
 
     model.train()
     for batch_idx, (data, target) in enumerate(train_loader):
+        print(batch_idx)
         data, target = data.to(device), target.to(device)
         optimizer.zero_grad()
         output = model(data)
@@ -88,10 +89,12 @@ def run_experiment(seed, args, network, dataset1, dataset2):
 
     model = network(d=args.d).to(device)
 
-    # stats['log'].append(f'The model has {sum(p.numel() for p in model.parameters())} parameters')
-    # print(stats['log'][-1])
+    stats['log'].append(f'The model has'
+                        f' {sum(p.numel() for p in model.parameters() if p.requires_grad)}'
+                        f' trainable parameters.')
+    print(stats['log'][-1])
 
-    optimizer = optim.Adam(model.parameters())
+    optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()))
 
     # scheduler = StepLR(optimizer, step_size=1, gamma=args.gamma)
     for epoch in range(1, args.epochs + 1):
