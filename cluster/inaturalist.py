@@ -221,8 +221,8 @@ network = {
 def prepare_inat(activation):
     # transform = lambda x: feature_extractor(x, return_tensors='pt')[
     #     'pixel_values'].squeeze()
-    train = torch.load("inaturalist100_train.pt")
-    test = torch.load("inaturalist100_test.pt")
+    train = torch.load("inaturalist100_resnet18_train.pt")
+    test = torch.load("inaturalist100_resnet18_test.pt")
     # train.dataset.transform = transform
     # test.dataset.transform = transform
     # train = Subset(datasets.INaturalist('../data', version='2021_train_mini',
