@@ -4,27 +4,29 @@ import torch
 from torch import nn
 from torch.functional import F
 from torch.utils.data import Subset
-from torchvision import datasets
-from transformers import ViTImageProcessor, ViTForImageClassification, AutoImageProcessor, ResNetForImageClassification
+from torchvision import datasets, transforms
+from transformers import ViTForImageClassification
+from transformers import AutoFeatureExtractor, ResNetForImageClassification
 
 EPSILON = 1e-8
 NUM_CLASSES = 100
 
-
-processor = ViTImageProcessor.from_pretrained('google/vit-base-patch16-224')
+# feature_extractor = AutoFeatureExtractor.from_pretrained("microsoft/resnet-18")
+# processor = ViTImageProcessor.from_pretrained('google/vit-base-patch16-224')
 
 class SoftmaxNetwork(nn.Module):
     def __init__(self, d=64):
         super(SoftmaxNetwork, self).__init__()
         self.dropout1 = nn.Dropout(0.25)
-        self.dropout2 = nn.Dropout(0.5)
-        self.fc1 = nn.Linear(768, 256)
+        self.dropout2 = nn.Dropout(0.5) if d == 64 else nn.Identity()
+        self.fc1 = nn.Linear(512, 256)
         self.fc2 = nn.Linear(256, d)
         self.fc3 = nn.Linear(d, NUM_CLASSES)
         self.d = d
-        self.model = ViTForImageClassification.from_pretrained(
-            'google/vit-base-patch16-224')
-        self.model.classifier = nn.Identity()
+        # self.model = ViTForImageClassification.from_pretrained(
+        #     'google/vit-base-patch16-224')
+        self.model = ResNetForImageClassification.from_pretrained("microsoft/resnet-18")
+        self.model.classifier = nn.Flatten()
         for param in self.model.parameters():
             param.requires_grad = False
 
@@ -42,32 +44,32 @@ class SoftmaxNetwork(nn.Module):
 
 
 class MixtureOfSoftmaxesNetwork(nn.Module):
-    def __init__(self, d=128, M=10):
+    def __init__(self, d=64, M=10):
         super(MixtureOfSoftmaxesNetwork, self).__init__()
-        self.conv1 = nn.Conv2d(1, 32, 3, 1)
-        self.conv2 = nn.Conv2d(32, 64, 3, 1)
         self.dropout1 = nn.Dropout(0.25)
-        self.dropout2 = nn.Dropout(0.5)
-        self.fc1 = nn.Linear(9216, d)
-        self.fc2 = nn.Linear(d, M * NUM_CLASSES)
+        self.dropout2 = nn.Dropout(0.5) if d == 64 else nn.Identity()
+        self.fc1 = nn.Linear(512, 256)
+        self.fc2 = nn.Linear(256, d)
+        self.fc3 = nn.Linear(d, M*NUM_CLASSES)
+        self.d = d
+        self.model = ResNetForImageClassification.from_pretrained("microsoft/resnet-18")
+        self.model.classifier = nn.Flatten()
+        for param in self.model.parameters():
+            param.requires_grad = False
+
         self.prior = nn.Parameter(torch.randn(M, 1), requires_grad=True)
         self.d = d
         self.M = M
 
     def forward(self, x):
-        x = self.conv1(x)
-        x = F.relu(x)
-        x = self.conv2(x)
-        x = F.relu(x)
-        x = F.max_pool2d(x, 2)
-        if self.d > 10:
-            x = self.dropout1(x)
-        x = torch.flatten(x, 1)
+        x = self.model(x).logits
         x = self.fc1(x)
-        x = F.relu(x)
-        if self.d > 10:
-            x = self.dropout2(x)
+        x = F.gelu(x)
+        x = self.dropout1(x)
         x = self.fc2(x)
+        x = F.gelu(x)
+        x = self.dropout2(x)
+        x = self.fc3(x)
         prior = F.softmax(self.prior, dim=1)
         x = F.softmax(x, dim=1)
         x = x.reshape([x.shape[0], NUM_CLASSES, self.M]) @ prior
@@ -76,15 +78,19 @@ class MixtureOfSoftmaxesNetwork(nn.Module):
 
 
 class SigSoftmaxNetwork(nn.Module):
-    def __init__(self, d=128):
+    def __init__(self, d=64):
         super(SigSoftmaxNetwork, self).__init__()
-        self.conv1 = nn.Conv2d(1, 32, 3, 1)
-        self.conv2 = nn.Conv2d(32, 64, 3, 1)
         self.dropout1 = nn.Dropout(0.25)
-        self.dropout2 = nn.Dropout(0.5)
-        self.fc1 = nn.Linear(9216, d)
-        self.fc2 = nn.Linear(d, NUM_CLASSES)
+        self.dropout2 = nn.Dropout(0.5) if d == 64 else nn.Identity()
+        self.fc1 = nn.Linear(512, 256)
+        self.fc2 = nn.Linear(256, d)
+        self.fc3 = nn.Linear(d, NUM_CLASSES)
         self.d = d
+        self.model = ResNetForImageClassification.from_pretrained(
+            "microsoft/resnet-18")
+        self.model.classifier = nn.Flatten()
+        for param in self.model.parameters():
+            param.requires_grad = False
 
     def log_sigsoftmax(self, logits):
         stable_logits = logits - torch.max(logits)
@@ -95,32 +101,33 @@ class SigSoftmaxNetwork(nn.Module):
         return stable_logits + log_sigmoid - log_z
 
     def forward(self, x):
-        x = self.conv1(x)
-        x = F.relu(x)
-        x = self.conv2(x)
-        x = F.relu(x)
-        x = F.max_pool2d(x, 2)
-        if self.d > 10:
-            x = self.dropout1(x)
-        x = torch.flatten(x, 1)
+        x = self.model(x).logits
         x = self.fc1(x)
-        x = F.relu(x)
-        if self.d > 10:
-            x = self.dropout2(x)
+        x = F.gelu(x)
+        x = self.dropout1(x)
         x = self.fc2(x)
+        x = F.gelu(x)
+        x = self.dropout2(x)
+        x = self.fc3(x)
         output = self.log_sigsoftmax(x)
         return output
 
 
 class MixtureOfSigSoftmaxesNetwork(nn.Module):
-    def __init__(self, d=128, M=10):
+    def __init__(self, d=64, M=10):
         super(MixtureOfSigSoftmaxesNetwork, self).__init__()
-        self.conv1 = nn.Conv2d(1, 32, 3, 1)
-        self.conv2 = nn.Conv2d(32, 64, 3, 1)
         self.dropout1 = nn.Dropout(0.25)
-        self.dropout2 = nn.Dropout(0.5)
-        self.fc1 = nn.Linear(9216, d)
-        self.fc2 = nn.Linear(d, M * NUM_CLASSES)
+        self.dropout2 = nn.Dropout(0.5) if d == 64 else nn.Identity()
+        self.fc1 = nn.Linear(512, 256)
+        self.fc2 = nn.Linear(256, d)
+        self.fc3 = nn.Linear(d, M*NUM_CLASSES)
+        self.d = d
+        self.model = ResNetForImageClassification.from_pretrained(
+            "microsoft/resnet-18")
+        self.model.classifier = nn.Flatten()
+        for param in self.model.parameters():
+            param.requires_grad = False
+
         self.prior = nn.Parameter(torch.randn(M, 1), requires_grad=True)
         self.d = d
         self.M = M
@@ -132,19 +139,14 @@ class MixtureOfSigSoftmaxesNetwork(nn.Module):
                     torch.sum(unnormalized, dim=1, keepdim=True) + EPSILON)
 
     def forward(self, x):
-        x = self.conv1(x)
-        x = F.relu(x)
-        x = self.conv2(x)
-        x = F.relu(x)
-        x = F.max_pool2d(x, 2)
-        if self.d > 10:
-            x = self.dropout1(x)
-        x = torch.flatten(x, 1)
+        x = self.model(x).logits
         x = self.fc1(x)
-        x = F.relu(x)
-        if self.d > 10:
-            x = self.dropout2(x)
+        x = F.gelu(x)
+        x = self.dropout1(x)
         x = self.fc2(x)
+        x = F.gelu(x)
+        x = self.dropout2(x)
+        x = self.fc3(x)
         prior = F.softmax(self.prior, dim=1)
         x = self.sigsoftmax(x)
         x = x.reshape([x.shape[0], NUM_CLASSES, self.M]) @ prior
@@ -153,21 +155,26 @@ class MixtureOfSigSoftmaxesNetwork(nn.Module):
 
 
 class PlifNetwork(nn.Module):
-    def __init__(self, d=128, K=100000, T=20, w_variance=1):
+    def __init__(self, d=64, K=100000, T=20, w_variance=1):
         super(PlifNetwork, self).__init__()
+        self.dropout1 = nn.Dropout(0.25)
+        self.dropout2 = nn.Dropout(0.5) if d == 64 else nn.Identity()
+        self.fc1 = nn.Linear(512, 256)
+        self.fc2 = nn.Linear(256, d)
+        self.fc3 = nn.Linear(d, NUM_CLASSES)
+        self.d = d
+        self.model = ResNetForImageClassification.from_pretrained(
+            "microsoft/resnet-18")
+        self.model.classifier = nn.Flatten()
+        for param in self.model.parameters():
+            param.requires_grad = False
+
         self.K = K
         self.T = T
         self.w_variance = w_variance
-        self.conv1 = nn.Conv2d(1, 32, 3, 1)
-        self.conv2 = nn.Conv2d(32, 64, 3, 1)
-        self.dropout1 = nn.Dropout(0.25)
-        self.dropout2 = nn.Dropout(0.5)
-        self.fc1 = nn.Linear(9216, d)
-        self.fc2 = nn.Linear(d, NUM_CLASSES)
         self.plif_w = nn.Parameter(
             torch.randn(self.K) * self.w_variance + math.log(math.exp(1) - 1)
         )
-        self.d = d
 
     def log_plif(self, logits):
         size = logits.size()
@@ -190,19 +197,14 @@ class PlifNetwork(nn.Module):
         return F.log_softmax(result.view(size), dim=1)
 
     def forward(self, x):
-        x = self.conv1(x)
-        x = F.relu(x)
-        x = self.conv2(x)
-        x = F.relu(x)
-        x = F.max_pool2d(x, 2)
-        if self.d > 10:
-            x = self.dropout1(x)
-        x = torch.flatten(x, 1)
+        x = self.model(x).logits
         x = self.fc1(x)
-        x = F.relu(x)
-        if self.d > 10:
-            x = self.dropout2(x)
+        x = F.gelu(x)
+        x = self.dropout1(x)
         x = self.fc2(x)
+        x = F.gelu(x)
+        x = self.dropout2(x)
+        x = self.fc3(x)
         output = self.log_plif(x)
         return output
 
@@ -217,30 +219,22 @@ network = {
 
 
 def prepare_inat(activation):
-    transform = lambda x: processor(x, return_tensors='pt')[
-        'pixel_values'].squeeze()
+    # transform = lambda x: feature_extractor(x, return_tensors='pt')[
+    #     'pixel_values'].squeeze()
     train = torch.load("inaturalist100_train.pt")
     test = torch.load("inaturalist100_test.pt")
-    train.dataset.transform = transform
-    test.dataset.transform = transform
+    # train.dataset.transform = transform
+    # test.dataset.transform = transform
     # train = Subset(datasets.INaturalist('../data', version='2021_train_mini',
     #                                     # download=True,
-    #                                     # transform=transform
+    #                                     transform=transform
     #                                     ),
     #                list(range(50 * NUM_CLASSES)))
     # test = Subset(datasets.INaturalist('../data', version='2021_valid',
     #                                    # download=True,
-    #                                    # transform=transform
+    #                                    transform=transform
     #                                    ),
     #               list(range(10 * NUM_CLASSES)))
-
-    # Define the paths to the files you want to save
-    # train_path = "inaturalist100_train.pt"
-    # test_path = "inaturalist100_test.pt"
-
-    # Save the train and test subsets to disk
-    # torch.save(train, train_path)
-    # torch.save(test, test_path)
 
 
     return network[activation], train, test

@@ -13,7 +13,6 @@ def train(args, model, device, train_loader, optimizer, epoch, stats):
 
     model.train()
     for batch_idx, (data, target) in enumerate(train_loader):
-        print(batch_idx)
         data, target = data.to(device), target.to(device)
         optimizer.zero_grad()
         output = model(data)
@@ -82,8 +81,8 @@ def run_experiment(seed, args, network, dataset1, dataset2):
                         f' and {args.activation} activation.')
     print(stats['log'][-1])
 
-    train_kwargs = {'batch_size': args.batch_size}
-    test_kwargs = {'batch_size': args.test_batch_size}
+    train_kwargs = {'batch_size': args.batch_size, 'shuffle': True}
+    test_kwargs = {'batch_size': args.test_batch_size, 'shuffle': True}
     train_loader = torch.utils.data.DataLoader(dataset1, **train_kwargs)
     test_loader = torch.utils.data.DataLoader(dataset2, **test_kwargs)
 
