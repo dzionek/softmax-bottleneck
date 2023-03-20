@@ -94,7 +94,7 @@ def run_experiment(seed, args, network, dataset1, dataset2):
                         f' trainable parameters.')
     print(stats['log'][-1])
 
-    optimizer = optim.Adam(filter(lambda p: p.requires_grad, model.parameters()))
+    optimizer = optim.AdamW(filter(lambda p: p.requires_grad, model.parameters()))
 
     # scheduler = StepLR(optimizer, step_size=1, gamma=args.gamma)
     for epoch in range(1, args.epochs + 1):

@@ -3,36 +3,43 @@ import math
 import torch
 from torch import nn
 from torch.functional import F
-from torchvision import datasets, transforms
-from transformers import ViTImageProcessor, ViTForImageClassification
+from torch.utils.data import Subset
+from torchvision import datasets
+from transformers import ViTImageProcessor, ViTForImageClassification, AutoImageProcessor, ResNetForImageClassification
 
 EPSILON = 1e-8
-NUM_CLASSES = 10000
+NUM_CLASSES = 100
+
 
 processor = ViTImageProcessor.from_pretrained('google/vit-base-patch16-224')
 
 class SoftmaxNetwork(nn.Module):
-    def __init__(self, d=4096):
+    def __init__(self, d=64):
         super(SoftmaxNetwork, self).__init__()
-        # self.dropout = nn.Dropout(0.5)
-        self.fc1 = nn.Linear(1000, 2048)
-        self.fc2 = nn.Linear(2048, d)
+        self.dropout1 = nn.Dropout(0.25)
+        self.dropout2 = nn.Dropout(0.5)
+        self.fc1 = nn.Linear(768, 256)
+        self.fc2 = nn.Linear(256, d)
         self.fc3 = nn.Linear(d, NUM_CLASSES)
         self.d = d
         self.model = ViTForImageClassification.from_pretrained(
             'google/vit-base-patch16-224')
+        self.model.classifier = nn.Identity()
         for param in self.model.parameters():
             param.requires_grad = False
 
     def forward(self, x):
         x = self.model(x).logits
         x = self.fc1(x)
-        x = F.relu(x)
+        x = F.gelu(x)
+        x = self.dropout1(x)
         x = self.fc2(x)
-        x = F.relu(x)
+        x = F.gelu(x)
+        x = self.dropout2(x)
         x = self.fc3(x)
         output = F.log_softmax(x, dim=1)
         return output
+
 
 class MixtureOfSoftmaxesNetwork(nn.Module):
     def __init__(self, d=128, M=10):
@@ -42,7 +49,7 @@ class MixtureOfSoftmaxesNetwork(nn.Module):
         self.dropout1 = nn.Dropout(0.25)
         self.dropout2 = nn.Dropout(0.5)
         self.fc1 = nn.Linear(9216, d)
-        self.fc2 = nn.Linear(d, M*NUM_CLASSES)
+        self.fc2 = nn.Linear(d, M * NUM_CLASSES)
         self.prior = nn.Parameter(torch.randn(M, 1), requires_grad=True)
         self.d = d
         self.M = M
@@ -104,6 +111,7 @@ class SigSoftmaxNetwork(nn.Module):
         output = self.log_sigsoftmax(x)
         return output
 
+
 class MixtureOfSigSoftmaxesNetwork(nn.Module):
     def __init__(self, d=128, M=10):
         super(MixtureOfSigSoftmaxesNetwork, self).__init__()
@@ -112,7 +120,7 @@ class MixtureOfSigSoftmaxesNetwork(nn.Module):
         self.dropout1 = nn.Dropout(0.25)
         self.dropout2 = nn.Dropout(0.5)
         self.fc1 = nn.Linear(9216, d)
-        self.fc2 = nn.Linear(d, M*NUM_CLASSES)
+        self.fc2 = nn.Linear(d, M * NUM_CLASSES)
         self.prior = nn.Parameter(torch.randn(M, 1), requires_grad=True)
         self.d = d
         self.M = M
@@ -120,7 +128,8 @@ class MixtureOfSigSoftmaxesNetwork(nn.Module):
     def sigsoftmax(self, logits):
         stable_logits = logits - torch.max(logits)
         unnormalized = torch.exp(stable_logits) * torch.sigmoid(logits)
-        return unnormalized / (torch.sum(unnormalized, dim=1, keepdim=True) + EPSILON)
+        return unnormalized / (
+                    torch.sum(unnormalized, dim=1, keepdim=True) + EPSILON)
 
     def forward(self, x):
         x = self.conv1(x)
@@ -197,6 +206,7 @@ class PlifNetwork(nn.Module):
         output = self.log_plif(x)
         return output
 
+
 network = {
     'softmax': SoftmaxNetwork,
     'mos': MixtureOfSoftmaxesNetwork,
@@ -205,13 +215,32 @@ network = {
     'plif': PlifNetwork
 }
 
+
 def prepare_inat(activation):
-    transform = lambda x: processor(x, return_tensors='pt')['pixel_values'].squeeze()
-    train = datasets.INaturalist('../data', version='2021_train_mini',
-                                 download=True,
-                                 transform=transform)
-    test = datasets.INaturalist('../data', version='2021_valid',
-                                download=True,
-                                transform=transform)
+    transform = lambda x: processor(x, return_tensors='pt')[
+        'pixel_values'].squeeze()
+    train = torch.load("inaturalist100_train.pt")
+    test = torch.load("inaturalist100_test.pt")
+    train.dataset.transform = transform
+    test.dataset.transform = transform
+    # train = Subset(datasets.INaturalist('../data', version='2021_train_mini',
+    #                                     # download=True,
+    #                                     # transform=transform
+    #                                     ),
+    #                list(range(50 * NUM_CLASSES)))
+    # test = Subset(datasets.INaturalist('../data', version='2021_valid',
+    #                                    # download=True,
+    #                                    # transform=transform
+    #                                    ),
+    #               list(range(10 * NUM_CLASSES)))
+
+    # Define the paths to the files you want to save
+    # train_path = "inaturalist100_train.pt"
+    # test_path = "inaturalist100_test.pt"
+
+    # Save the train and test subsets to disk
+    # torch.save(train, train_path)
+    # torch.save(test, test_path)
+
 
     return network[activation], train, test

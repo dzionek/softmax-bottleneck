@@ -25,6 +25,7 @@ parser.add_argument('-t', '--test_batch_size', type=int, default=10000)
 parser.add_argument('-s', '--num_seeds', type=int, default=1)
 parser.add_argument('--save_dir', default='experiments')
 # parser.add_argument('--save_model', action='store_true')
+# parser.add_argument('--pre_trained', choices=['resnet50', 'vit'])
 
 args = parser.parse_args()
 
