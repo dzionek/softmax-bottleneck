@@ -17,9 +17,9 @@ NUM_CLASSES = 100
 class SoftmaxNetwork(nn.Module):
     def __init__(self, d=64):
         super(SoftmaxNetwork, self).__init__()
-        self.dropout1 = nn.Dropout(0.5)
-        self.dropout2 = nn.Dropout(0.5)
-        self.dropout3 = nn.Dropout(0.25)
+        self.dropout1 = nn.Dropout(0.4)
+        self.dropout2 = nn.Dropout(0.4)
+        self.dropout3 = nn.Identity()
         self.fc1 = nn.Linear(512, 256)
         self.fc2 = nn.Linear(256, d)
         self.fc3 = nn.Linear(d, NUM_CLASSES)
@@ -48,9 +48,9 @@ class SoftmaxNetwork(nn.Module):
 class MixtureOfSoftmaxesNetwork(nn.Module):
     def __init__(self, d=64, M=10):
         super(MixtureOfSoftmaxesNetwork, self).__init__()
-        self.dropout1 = nn.Dropout(0.5)
-        self.dropout2 = nn.Dropout(0.5)
-        self.dropout3 = nn.Dropout(0.25)
+        self.dropout1 = nn.Dropout(0.4)
+        self.dropout2 = nn.Dropout(0.4)
+        self.dropout3 = nn.Identity()
         self.fc1 = nn.Linear(512, 256)
         self.fc2 = nn.Linear(256, d)
         self.fc3 = nn.Linear(d, M*NUM_CLASSES)
@@ -84,9 +84,9 @@ class MixtureOfSoftmaxesNetwork(nn.Module):
 class SigSoftmaxNetwork(nn.Module):
     def __init__(self, d=64):
         super(SigSoftmaxNetwork, self).__init__()
-        self.dropout1 = nn.Dropout(0.5)
-        self.dropout2 = nn.Dropout(0.5)
-        self.dropout3 = nn.Dropout(0.25)
+        self.dropout1 = nn.Dropout(0.4)
+        self.dropout2 = nn.Dropout(0.4)
+        self.dropout3 = nn.Identity()
         self.fc1 = nn.Linear(512, 256)
         self.fc2 = nn.Linear(256, d)
         self.fc3 = nn.Linear(d, NUM_CLASSES)
@@ -122,9 +122,9 @@ class SigSoftmaxNetwork(nn.Module):
 class MixtureOfSigSoftmaxesNetwork(nn.Module):
     def __init__(self, d=64, M=10):
         super(MixtureOfSigSoftmaxesNetwork, self).__init__()
-        self.dropout1 = nn.Dropout(0.5)
-        self.dropout2 = nn.Dropout(0.5)
-        self.dropout3 = nn.Dropout(0.25)
+        self.dropout1 = nn.Dropout(0.4)
+        self.dropout2 = nn.Dropout(0.4)
+        self.dropout3 = nn.Identity()
         self.fc1 = nn.Linear(512, 256)
         self.fc2 = nn.Linear(256, d)
         self.fc3 = nn.Linear(d, M*NUM_CLASSES)
@@ -165,9 +165,9 @@ class MixtureOfSigSoftmaxesNetwork(nn.Module):
 class PlifNetwork(nn.Module):
     def __init__(self, d=64, K=100000, T=20, w_variance=1):
         super(PlifNetwork, self).__init__()
-        self.dropout1 = nn.Dropout(0.5)
-        self.dropout2 = nn.Dropout(0.5)
-        self.dropout3 = nn.Dropout(0.25)
+        self.dropout1 = nn.Dropout(0.4)
+        self.dropout2 = nn.Dropout(0.4)
+        self.dropout3 = nn.Identity()
         self.fc1 = nn.Linear(512, 256)
         self.fc2 = nn.Linear(256, d)
         self.fc3 = nn.Linear(d, NUM_CLASSES)
