@@ -10,7 +10,7 @@ NUM_CLASSES = 10
 
 class SoftmaxNetwork(nn.Module):
     def __init__(self, d=128):
-        super(SoftmaxNetwork, self).__init__()
+        super().__init__()
         self.conv1 = nn.Conv2d(1, 32, 3, 1)
         self.conv2 = nn.Conv2d(32, 64, 3, 1)
         self.dropout1 = nn.Dropout(0.25)
@@ -38,14 +38,14 @@ class SoftmaxNetwork(nn.Module):
 
 class MixtureOfSoftmaxesNetwork(nn.Module):
     def __init__(self, d=128, M=10):
-        super(MixtureOfSoftmaxesNetwork, self).__init__()
+        super().__init__()
         self.conv1 = nn.Conv2d(1, 32, 3, 1)
         self.conv2 = nn.Conv2d(32, 64, 3, 1)
         self.dropout1 = nn.Dropout(0.25)
         self.dropout2 = nn.Dropout(0.5)
-        self.fc1 = nn.Linear(9216, d)
-        self.fc2 = nn.Linear(d, M*NUM_CLASSES)
-        self.prior = nn.Parameter(torch.randn(M, 1), requires_grad=True)
+        self.fc1 = nn.Linear(9216, d * M)
+        self.fc2 = nn.Linear(d, NUM_CLASSES)
+        self.prior = nn.Parameter(torch.randn(M), requires_grad=True)
         self.d = d
         self.M = M
 
@@ -62,17 +62,19 @@ class MixtureOfSoftmaxesNetwork(nn.Module):
         x = F.relu(x)
         if self.d > 10:
             x = self.dropout2(x)
-        x = self.fc2(x)
-        prior = F.softmax(self.prior, dim=1)
-        x = F.softmax(x, dim=1)
-        x = x.reshape([x.shape[0], NUM_CLASSES, self.M]) @ prior
-        output = torch.log(x.squeeze() + EPSILON)
+        x = x.reshape((x.shape[0], self.M, self.d))
+
+        prior = F.softmax(self.prior, dim=-1)
+        output = F.softmax(self.fc2(x), dim=2)
+        output = output * prior.view((1, self.M, 1)).repeat((x.shape[0], 1, NUM_CLASSES))
+        output = torch.sum(output, dim=1)
+        output = torch.log(output + EPSILON)
         return output
 
 
 class SigSoftmaxNetwork(nn.Module):
     def __init__(self, d=128):
-        super(SigSoftmaxNetwork, self).__init__()
+        super().__init__()
         self.conv1 = nn.Conv2d(1, 32, 3, 1)
         self.conv2 = nn.Conv2d(32, 64, 3, 1)
         self.dropout1 = nn.Dropout(0.25)
@@ -108,21 +110,22 @@ class SigSoftmaxNetwork(nn.Module):
 
 class MixtureOfSigSoftmaxesNetwork(nn.Module):
     def __init__(self, d=128, M=10):
-        super(MixtureOfSigSoftmaxesNetwork, self).__init__()
+        super().__init__()
         self.conv1 = nn.Conv2d(1, 32, 3, 1)
         self.conv2 = nn.Conv2d(32, 64, 3, 1)
         self.dropout1 = nn.Dropout(0.25)
         self.dropout2 = nn.Dropout(0.5)
-        self.fc1 = nn.Linear(9216, d)
-        self.fc2 = nn.Linear(d, M*NUM_CLASSES)
-        self.prior = nn.Parameter(torch.randn(M, 1), requires_grad=True)
+        self.fc1 = nn.Linear(9216, d * M)
+        self.fc2 = nn.Linear(d, NUM_CLASSES)
+        self.prior = nn.Parameter(torch.randn(M), requires_grad=True)
         self.d = d
         self.M = M
 
-    def sigsoftmax(self, logits):
+    def sigsoftmax(self, logits, dim):
         stable_logits = logits - torch.max(logits)
         unnormalized = torch.exp(stable_logits) * torch.sigmoid(logits)
-        return unnormalized / (torch.sum(unnormalized, dim=1, keepdim=True) + EPSILON)
+        return unnormalized / (
+                    torch.sum(unnormalized, dim=dim, keepdim=True) + EPSILON)
 
     def forward(self, x):
         x = self.conv1(x)
@@ -137,17 +140,19 @@ class MixtureOfSigSoftmaxesNetwork(nn.Module):
         x = F.relu(x)
         if self.d > 10:
             x = self.dropout2(x)
-        x = self.fc2(x)
-        prior = F.softmax(self.prior, dim=1)
-        x = self.sigsoftmax(x)
-        x = x.reshape([x.shape[0], NUM_CLASSES, self.M]) @ prior
-        output = torch.log(x.squeeze() + EPSILON)
+        x = x.reshape((x.shape[0], self.M, self.d))
+
+        prior = F.softmax(self.prior, dim=-1)
+        output = self.sigsoftmax(self.fc2(x), dim=2)
+        output = output * prior.view((1, self.M, 1)).repeat((x.shape[0], 1, NUM_CLASSES))
+        output = torch.sum(output, dim=1)
+        output = torch.log(output + EPSILON)
         return output
 
 
 class PlifNetwork(nn.Module):
     def __init__(self, d=128, K=100000, T=20, w_variance=1):
-        super(PlifNetwork, self).__init__()
+        super().__init__()
         self.K = K
         self.T = T
         self.w_variance = w_variance

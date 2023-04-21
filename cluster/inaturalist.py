@@ -31,8 +31,6 @@ class MixtureOfSoftmaxesNetwork(nn.Module):
         super().__init__()
         self.fc1 = nn.Linear(768, d * M)
         self.fc2 = nn.Linear(d, NUM_CLASSES)
-        self.d = d
-
         self.prior = nn.Parameter(torch.randn(M), requires_grad=True)
         self.d = d
         self.M = M
@@ -82,11 +80,11 @@ class MixtureOfSigSoftmaxesNetwork(nn.Module):
         self.d = d
         self.M = M
 
-    def sigsoftmax(self, logits):
+    def sigsoftmax(self, logits, dim):
         stable_logits = logits - torch.max(logits)
         unnormalized = torch.exp(stable_logits) * torch.sigmoid(logits)
         return unnormalized / (
-                    torch.sum(unnormalized, dim=1, keepdim=True) + EPSILON)
+                    torch.sum(unnormalized, dim=dim, keepdim=True) + EPSILON)
 
     def forward(self, x):
         x = self.fc1(x)
@@ -94,7 +92,7 @@ class MixtureOfSigSoftmaxesNetwork(nn.Module):
         x = x.reshape((x.shape[0], self.M, self.d))
 
         prior = F.softmax(self.prior, dim=-1)
-        output = F.softmax(self.fc2(x), dim=2)
+        output = self.sigsoftmax(self.fc2(x), dim=2)
         output = output * prior.view((1, self.M, 1)).repeat((x.shape[0], 1, NUM_CLASSES))
         output = torch.sum(output, dim=1)
         output = torch.log(output + EPSILON)
