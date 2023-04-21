@@ -1,5 +1,5 @@
 ##!/bin/bash
-MODELS=('mos' 'moss')
+MODELS=('mos' 'moss' 'sigsoftmax' 'moss' 'plif')
 
 # Run MNIST
 EXPERIMENTS_DIR="experiments/mnist"
