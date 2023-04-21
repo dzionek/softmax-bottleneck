@@ -1,5 +1,5 @@
 ##!/bin/bash
-MODELS=('mos' 'moss' 'sigsoftmax' 'moss' 'plif')
+MODELS=('softmax' 'mos' 'sigsoftmax' 'moss' 'plif')
 
 # Run MNIST
 EXPERIMENTS_DIR="experiments/mnist"
@@ -32,7 +32,7 @@ do
     if test -f "${EXPERIMENTS_DIR}/${NAME}_log"; then
       echo "Skipping. ${NAME} already exists."
     else
-      printf "#!/bin/bash\n/usr/bin/python main.py ${NAME} inat $model -c cuda -e 50 -d $d -s 1 -b 128 -t 128 --save_dir ${EXPERIMENTS_DIR}" >> ${NAME}.sh
+      printf "#!/bin/bash\n/usr/bin/python main.py ${NAME} inat $model -c cuda -e 200 -d $d -s 10 -b 128 -t 10000 --save_dir ${EXPERIMENTS_DIR}" >> ${NAME}.sh
       sbatch --time=7:00:00 --gres=gpu:1 ${NAME}.sh
       rm -rf ${NAME}.sh
     fi

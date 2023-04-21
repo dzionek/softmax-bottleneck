@@ -18,20 +18,20 @@ def save_results(args, results):
     fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(15, 5))
 
     epochs = range(1, args.epochs+1)
-    ax1.plot(epochs, results['train_loss'][0], 'b', label='Training Loss', alpha=1)
-    ax1.plot(epochs, results['test_loss'][0], 'r', label='Test Loss', alpha=1)
+    ax1.plot(epochs, results['train_loss'][0], 'b', label='Training Loss', alpha=0.3)
+    ax1.plot(epochs, results['test_loss'][0], 'r', label='Test Loss', alpha=0.3)
     for i in range(1, len(results['train_loss'])):
-        ax1.plot(epochs, results['train_loss'][i], 'b', alpha=1)
-        ax1.plot(epochs, results['test_loss'][i], 'r', alpha=1)
+        ax1.plot(epochs, results['train_loss'][i], 'b', alpha=0.3)
+        ax1.plot(epochs, results['test_loss'][i], 'r', alpha=0.3)
     ax1.set_xlabel('Number of Epochs')
     ax1.set_ylabel('Average Loss')
     ax1.legend()
 
-    ax2.plot(epochs, results['train_accuracy'][0], 'b', label='Training Accuracy', alpha=1)
-    ax2.plot(epochs, results['test_accuracy'][0], 'r', label='Test Accuracy', alpha=1)
+    ax2.plot(epochs, results['train_accuracy'][0], 'b', label='Training Accuracy', alpha=0.3)
+    ax2.plot(epochs, results['test_accuracy'][0], 'r', label='Test Accuracy', alpha=0.3)
     for i in range(1, len(results['train_loss'])):
-        ax2.plot(epochs, results['train_accuracy'][i], 'b', alpha=1)
-        ax2.plot(epochs, results['test_accuracy'][i], 'r', alpha=1)
+        ax2.plot(epochs, results['train_accuracy'][i], 'b', alpha=0.3)
+        ax2.plot(epochs, results['test_accuracy'][i], 'r', alpha=0.3)
     ax2.set_xlabel('Number of Epochs')
     ax2.set_ylabel('Accuracy')
     ax2.legend()
