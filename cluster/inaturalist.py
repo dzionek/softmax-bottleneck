@@ -1,11 +1,9 @@
 import math
+import pickle
 
 import torch
 from torch import nn
 from torch.functional import F
-# from torch.utils.data import Subset
-# from torchvision import datasets, transforms
-# from transformers import ViTForImageClassification
 
 EPSILON = 1e-8
 NUM_CLASSES = 100
@@ -150,54 +148,60 @@ network = {
 }
 
 
-# def prepare_dataset():
-#     model = ViTForImageClassification.from_pretrained('google/vit-base-patch16-224')
-#     model.classifier = nn.Identity()
-#
-#     processor = ViTImageProcessor.from_pretrained('google/vit-base-patch16-224')
-#     def my_normalization(x):
-#         return model(processor(x, return_tensors='pt')['pixel_values']).logits.squeeze()
-#
-#     transform = transforms.Compose([transforms.Lambda(my_normalization)])
-#
-#     train = Subset(datasets.INaturalist('../data', version='2021_train_mini',
-#                                         # download=True,
-#                                         transform=transform
-#                                         ),
-#                    list(range(50 * NUM_CLASSES)))
-#
-#     test = Subset(datasets.INaturalist('../data', version='2021_valid',
-#                                        # download=True,
-#                                        transform=transform
-#                                        ),
-#                   list(range(10 * NUM_CLASSES)))
-#
-#     train_list = [(train[i][0].detach().cpu().numpy(), train[i][1]) for i in
-#                  range(len(train))]
-#
-#     test_list = [(test[i][0].detach().cpu().numpy(), test[i][1]) for i in
-#                  range(len(test))]
-#
-#     torch.save(train_list, f'inaturalist{NUM_CLASSES}_train.pt')
-#     torch.save(test_list, f'inaturalist{NUM_CLASSES}_test.pt')
+def prepare_dataset():
+    from torch.utils.data import Subset
+    from torchvision import datasets, transforms
+    from transformers import ViTForImageClassification, ViTImageProcessor
+
+    with open("inat_train_indices", "rb") as f:
+        train_indices = pickle.load(f)
+
+    with open("inat_test_indices", "rb") as f:
+        test_indices = pickle.load(f)
+
+    model = ViTForImageClassification.from_pretrained('google/vit-base-patch16-224')
+    model.classifier = nn.Identity()
+
+    processor = ViTImageProcessor.from_pretrained('google/vit-base-patch16-224')
+    def my_normalization(x):
+        return model(processor(x, return_tensors='pt')['pixel_values']).logits.squeeze()
+
+    transform = transforms.Compose([transforms.Lambda(my_normalization)])
+
+    train = Subset(datasets.INaturalist('../data', version='2021_train_mini',
+                                        # download=True,
+                                        transform=transform
+                                        ), train_indices)
+
+    test = Subset(datasets.INaturalist('../data', version='2021_valid',
+                                       # download=True,
+                                       transform=transform
+                                       ), test_indices)
+
+    train_list = [(train[i][0].detach().cpu().numpy(), train[i][1]) for i in
+                  range(len(train))]
+
+    test_list = [(test[i][0].detach().cpu().numpy(), test[i][1]) for i in
+                 range(len(test))]
+
+    torch.save(train_list, f'inaturalist{NUM_CLASSES}_train.pt')
+    torch.save(test_list, f'inaturalist{NUM_CLASSES}_test.pt')
 
 def prepare_inat(activation):
-    # transform = lambda x: feature_extractor(x, return_tensors='pt')[
-    #     'pixel_values']
-    train = torch.load(f'inaturalist{NUM_CLASSES}_train.pt')
-    test = torch.load(f'inaturalist{NUM_CLASSES}_test.pt')
-    # train.dataset.transform = transform
-    # test.dataset.transform = transform
-    # train = Subset(datasets.INaturalist('../data', version='2021_train_mini',
-    #                                     # download=True,
-    #                                     transform=transform
-    #                                     ),
-    #                list(range(50 * NUM_CLASSES)))
-    # test = Subset(datasets.INaturalist('../data', version='2021_valid',
-    #                                    # download=True,
-    #                                    transform=transform
-    #                                    ),
-    #               list(range(10 * NUM_CLASSES)))
+    with open("inat_sampled_classes", "rb") as f:
+        sampled_classes = pickle.load(f)
 
+    class_mapping = {cls: i for i, cls in enumerate(sampled_classes)}
+
+    train = torch.load(f'inaturalist{NUM_CLASSES}_train.pt')
+    for i in range(len(train)):
+        train[i] = (train[i][0], class_mapping[train[i][1]])
+    test = torch.load(f'inaturalist{NUM_CLASSES}_test.pt')
+    for i in range(len(test)):
+        test[i] = (test[i][0], class_mapping[test[i][1]])
 
     return network[activation], train, test
+
+
+# if __name__ == '__main__':
+#     prepare_dataset()
