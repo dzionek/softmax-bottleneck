@@ -1,1688 +1,1697 @@
 For seed 1/10
-{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
+{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'mixtures': 0, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
 Training a model on mnist using cuda and plif activation.
+The model has 137280 trainable parameters.
 Train Epoch: 1/40
-Epoch training took 22s.
-Training set: Average loss: 1.6875, Accuracy: 14097/60000 (23.5%)
-Test set: Average loss: 1.6905, Accuracy: 2286/10000 (22.9%)
-Rank 7/10.
+Epoch training took 24s.
+Training set: Average loss: 1.6867, Accuracy: 14760/60000 (24.6%)
+Test set: Average loss: 1.6858, Accuracy: 2414/10000 (24.1%)
+Rank 8/10.
 Train Epoch: 2/40
 Epoch training took 22s.
-Training set: Average loss: 1.5588, Accuracy: 17644/60000 (29.4%)
-Test set: Average loss: 1.5696, Accuracy: 2856/10000 (28.6%)
-Rank 7/10.
+Training set: Average loss: 1.5405, Accuracy: 18357/60000 (30.6%)
+Test set: Average loss: 1.5482, Accuracy: 3073/10000 (30.7%)
+Rank 8/10.
 Train Epoch: 3/40
 Epoch training took 22s.
-Training set: Average loss: 1.4475, Accuracy: 22842/60000 (38.1%)
-Test set: Average loss: 1.4558, Accuracy: 3866/10000 (38.7%)
+Training set: Average loss: 1.4389, Accuracy: 20893/60000 (34.8%)
+Test set: Average loss: 1.45, Accuracy: 3460/10000 (34.6%)
 Rank 8/10.
 Train Epoch: 4/40
-Epoch training took 22s.
-Training set: Average loss: 1.3679, Accuracy: 25507/60000 (42.5%)
-Test set: Average loss: 1.3776, Accuracy: 4254/10000 (42.5%)
+Epoch training took 23s.
+Training set: Average loss: 1.3827, Accuracy: 24506/60000 (40.8%)
+Test set: Average loss: 1.4017, Accuracy: 4119/10000 (41.2%)
 Rank 8/10.
 Train Epoch: 5/40
-Epoch training took 22s.
-Training set: Average loss: 1.3209, Accuracy: 25350/60000 (42.2%)
-Test set: Average loss: 1.3358, Accuracy: 4158/10000 (41.6%)
+Epoch training took 23s.
+Training set: Average loss: 1.2746, Accuracy: 25755/60000 (42.9%)
+Test set: Average loss: 1.2925, Accuracy: 4162/10000 (41.6%)
 Rank 8/10.
 Train Epoch: 6/40
-Epoch training took 22s.
-Training set: Average loss: 1.2455, Accuracy: 28123/60000 (46.9%)
-Test set: Average loss: 1.2664, Accuracy: 4644/10000 (46.4%)
+Epoch training took 23s.
+Training set: Average loss: 1.202, Accuracy: 29060/60000 (48.4%)
+Test set: Average loss: 1.2182, Accuracy: 4767/10000 (47.7%)
 Rank 8/10.
 Train Epoch: 7/40
-Epoch training took 22s.
-Training set: Average loss: 1.1806, Accuracy: 29769/60000 (49.6%)
-Test set: Average loss: 1.2114, Accuracy: 4887/10000 (48.9%)
+Epoch training took 23s.
+Training set: Average loss: 1.1466, Accuracy: 29129/60000 (48.5%)
+Test set: Average loss: 1.1759, Accuracy: 4740/10000 (47.4%)
 Rank 8/10.
 Train Epoch: 8/40
-Epoch training took 22s.
-Training set: Average loss: 1.1725, Accuracy: 28575/60000 (47.6%)
-Test set: Average loss: 1.2062, Accuracy: 4678/10000 (46.8%)
-Rank 9/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1116, Accuracy: 30905/60000 (51.5%)
+Test set: Average loss: 1.1495, Accuracy: 5067/10000 (50.7%)
+Rank 8/10.
 Train Epoch: 9/40
-Epoch training took 22s.
-Training set: Average loss: 1.1122, Accuracy: 31960/60000 (53.3%)
-Test set: Average loss: 1.1575, Accuracy: 5178/10000 (51.8%)
+Epoch training took 23s.
+Training set: Average loss: 1.0749, Accuracy: 32311/60000 (53.9%)
+Test set: Average loss: 1.1179, Accuracy: 5265/10000 (52.6%)
 Rank 9/10.
 Train Epoch: 10/40
-Epoch training took 22s.
-Training set: Average loss: 1.085, Accuracy: 31697/60000 (52.8%)
-Test set: Average loss: 1.1343, Accuracy: 5167/10000 (51.7%)
-Rank 9/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0387, Accuracy: 33626/60000 (56.0%)
+Test set: Average loss: 1.0928, Accuracy: 5395/10000 (54.0%)
+Rank 8/10.
 Train Epoch: 11/40
-Epoch training took 22s.
-Training set: Average loss: 1.0525, Accuracy: 32707/60000 (54.5%)
-Test set: Average loss: 1.1159, Accuracy: 5257/10000 (52.6%)
-Rank 9/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0261, Accuracy: 34015/60000 (56.7%)
+Test set: Average loss: 1.0831, Accuracy: 5449/10000 (54.5%)
+Rank 8/10.
 Train Epoch: 12/40
-Epoch training took 22s.
-Training set: Average loss: 1.0416, Accuracy: 33411/60000 (55.7%)
-Test set: Average loss: 1.1071, Accuracy: 5386/10000 (53.9%)
+Epoch training took 23s.
+Training set: Average loss: 1.0016, Accuracy: 34569/60000 (57.6%)
+Test set: Average loss: 1.0664, Accuracy: 5556/10000 (55.6%)
 Rank 9/10.
 Train Epoch: 13/40
 Epoch training took 22s.
-Training set: Average loss: 1.0384, Accuracy: 32532/60000 (54.2%)
-Test set: Average loss: 1.1084, Accuracy: 5193/10000 (51.9%)
-Rank 9/10.
+Training set: Average loss: 0.9836, Accuracy: 35036/60000 (58.4%)
+Test set: Average loss: 1.0519, Accuracy: 5581/10000 (55.8%)
+Rank 8/10.
 Train Epoch: 14/40
 Epoch training took 22s.
-Training set: Average loss: 1.0132, Accuracy: 33718/60000 (56.2%)
-Test set: Average loss: 1.0975, Accuracy: 5389/10000 (53.9%)
+Training set: Average loss: 0.9937, Accuracy: 33936/60000 (56.6%)
+Test set: Average loss: 1.0738, Accuracy: 5404/10000 (54.0%)
 Rank 9/10.
 Train Epoch: 15/40
 Epoch training took 22s.
-Training set: Average loss: 1.0273, Accuracy: 32608/60000 (54.3%)
-Test set: Average loss: 1.1103, Accuracy: 5207/10000 (52.1%)
+Training set: Average loss: 0.9747, Accuracy: 34681/60000 (57.8%)
+Test set: Average loss: 1.0608, Accuracy: 5495/10000 (55.0%)
 Rank 9/10.
 Train Epoch: 16/40
 Epoch training took 22s.
-Training set: Average loss: 1.0819, Accuracy: 31084/60000 (51.8%)
-Test set: Average loss: 1.1583, Accuracy: 4970/10000 (49.7%)
-Rank 10/10.
+Training set: Average loss: 0.949, Accuracy: 35388/60000 (59.0%)
+Test set: Average loss: 1.0362, Accuracy: 5591/10000 (55.9%)
+Rank 9/10.
 Train Epoch: 17/40
 Epoch training took 22s.
-Training set: Average loss: 0.9915, Accuracy: 33879/60000 (56.5%)
-Test set: Average loss: 1.0894, Accuracy: 5376/10000 (53.8%)
+Training set: Average loss: 0.9472, Accuracy: 35387/60000 (59.0%)
+Test set: Average loss: 1.0441, Accuracy: 5554/10000 (55.5%)
 Rank 9/10.
 Train Epoch: 18/40
-Epoch training took 22s.
-Training set: Average loss: 0.9784, Accuracy: 33899/60000 (56.5%)
-Test set: Average loss: 1.0894, Accuracy: 5321/10000 (53.2%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9367, Accuracy: 35683/60000 (59.5%)
+Test set: Average loss: 1.0307, Accuracy: 5634/10000 (56.3%)
+Rank 9/10.
 Train Epoch: 19/40
-Epoch training took 22s.
-Training set: Average loss: 0.9893, Accuracy: 33416/60000 (55.7%)
-Test set: Average loss: 1.1072, Accuracy: 5262/10000 (52.6%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9243, Accuracy: 35813/60000 (59.7%)
+Test set: Average loss: 1.0277, Accuracy: 5636/10000 (56.4%)
+Rank 9/10.
 Train Epoch: 20/40
-Epoch training took 22s.
-Training set: Average loss: 0.9461, Accuracy: 34978/60000 (58.3%)
-Test set: Average loss: 1.0667, Accuracy: 5495/10000 (55.0%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9229, Accuracy: 35739/60000 (59.6%)
+Test set: Average loss: 1.0277, Accuracy: 5633/10000 (56.3%)
+Rank 9/10.
 Train Epoch: 21/40
-Epoch training took 22s.
-Training set: Average loss: 0.9568, Accuracy: 34192/60000 (57.0%)
-Test set: Average loss: 1.0834, Accuracy: 5315/10000 (53.1%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9185, Accuracy: 35812/60000 (59.7%)
+Test set: Average loss: 1.0386, Accuracy: 5629/10000 (56.3%)
+Rank 9/10.
 Train Epoch: 22/40
-Epoch training took 22s.
-Training set: Average loss: 0.9388, Accuracy: 35579/60000 (59.3%)
-Test set: Average loss: 1.0674, Accuracy: 5561/10000 (55.6%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9053, Accuracy: 36291/60000 (60.5%)
+Test set: Average loss: 1.0213, Accuracy: 5711/10000 (57.1%)
+Rank 9/10.
 Train Epoch: 23/40
-Epoch training took 22s.
-Training set: Average loss: 0.9473, Accuracy: 35425/60000 (59.0%)
-Test set: Average loss: 1.079, Accuracy: 5551/10000 (55.5%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9069, Accuracy: 36222/60000 (60.4%)
+Test set: Average loss: 1.0182, Accuracy: 5651/10000 (56.5%)
+Rank 9/10.
 Train Epoch: 24/40
-Epoch training took 22s.
-Training set: Average loss: 0.9301, Accuracy: 35057/60000 (58.4%)
-Test set: Average loss: 1.0716, Accuracy: 5433/10000 (54.3%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9071, Accuracy: 36312/60000 (60.5%)
+Test set: Average loss: 1.0252, Accuracy: 5621/10000 (56.2%)
+Rank 9/10.
 Train Epoch: 25/40
-Epoch training took 22s.
-Training set: Average loss: 0.9171, Accuracy: 35383/60000 (59.0%)
-Test set: Average loss: 1.0543, Accuracy: 5489/10000 (54.9%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.8928, Accuracy: 36385/60000 (60.6%)
+Test set: Average loss: 1.0208, Accuracy: 5663/10000 (56.6%)
+Rank 9/10.
 Train Epoch: 26/40
-Epoch training took 22s.
-Training set: Average loss: 0.9142, Accuracy: 35542/60000 (59.2%)
-Test set: Average loss: 1.0562, Accuracy: 5479/10000 (54.8%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.8917, Accuracy: 36209/60000 (60.3%)
+Test set: Average loss: 1.0222, Accuracy: 5615/10000 (56.1%)
+Rank 9/10.
 Train Epoch: 27/40
-Epoch training took 22s.
-Training set: Average loss: 0.8961, Accuracy: 35967/60000 (59.9%)
-Test set: Average loss: 1.0467, Accuracy: 5568/10000 (55.7%)
+Epoch training took 23s.
+Training set: Average loss: 0.8865, Accuracy: 36438/60000 (60.7%)
+Test set: Average loss: 1.0324, Accuracy: 5641/10000 (56.4%)
 Rank 10/10.
 Train Epoch: 28/40
-Epoch training took 22s.
-Training set: Average loss: 0.8925, Accuracy: 36133/60000 (60.2%)
-Test set: Average loss: 1.0475, Accuracy: 5592/10000 (55.9%)
+Epoch training took 23s.
+Training set: Average loss: 0.876, Accuracy: 36750/60000 (61.2%)
+Test set: Average loss: 1.0133, Accuracy: 5692/10000 (56.9%)
 Rank 10/10.
 Train Epoch: 29/40
-Epoch training took 22s.
-Training set: Average loss: 0.8869, Accuracy: 36213/60000 (60.4%)
-Test set: Average loss: 1.0556, Accuracy: 5572/10000 (55.7%)
+Epoch training took 23s.
+Training set: Average loss: 0.8887, Accuracy: 36068/60000 (60.1%)
+Test set: Average loss: 1.0316, Accuracy: 5630/10000 (56.3%)
 Rank 10/10.
 Train Epoch: 30/40
-Epoch training took 22s.
-Training set: Average loss: 0.9078, Accuracy: 35458/60000 (59.1%)
-Test set: Average loss: 1.0762, Accuracy: 5484/10000 (54.8%)
+Epoch training took 23s.
+Training set: Average loss: 0.8708, Accuracy: 36788/60000 (61.3%)
+Test set: Average loss: 1.0208, Accuracy: 5669/10000 (56.7%)
 Rank 10/10.
 Train Epoch: 31/40
-Epoch training took 22s.
-Training set: Average loss: 0.8913, Accuracy: 35920/60000 (59.9%)
-Test set: Average loss: 1.0653, Accuracy: 5507/10000 (55.1%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.8745, Accuracy: 36022/60000 (60.0%)
+Test set: Average loss: 1.0235, Accuracy: 5582/10000 (55.8%)
+Rank 9/10.
 Train Epoch: 32/40
-Epoch training took 22s.
-Training set: Average loss: 0.902, Accuracy: 35449/60000 (59.1%)
-Test set: Average loss: 1.0781, Accuracy: 5414/10000 (54.1%)
+Epoch training took 23s.
+Training set: Average loss: 0.8754, Accuracy: 36310/60000 (60.5%)
+Test set: Average loss: 1.0337, Accuracy: 5623/10000 (56.2%)
 Rank 10/10.
 Train Epoch: 33/40
-Epoch training took 22s.
-Training set: Average loss: 0.8795, Accuracy: 36196/60000 (60.3%)
-Test set: Average loss: 1.0516, Accuracy: 5558/10000 (55.6%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.8595, Accuracy: 36926/60000 (61.5%)
+Test set: Average loss: 1.0251, Accuracy: 5674/10000 (56.7%)
+Rank 9/10.
 Train Epoch: 34/40
 Epoch training took 22s.
-Training set: Average loss: 0.8846, Accuracy: 35992/60000 (60.0%)
-Test set: Average loss: 1.0724, Accuracy: 5552/10000 (55.5%)
+Training set: Average loss: 0.877, Accuracy: 36475/60000 (60.8%)
+Test set: Average loss: 1.0427, Accuracy: 5589/10000 (55.9%)
 Rank 10/10.
 Train Epoch: 35/40
 Epoch training took 22s.
-Training set: Average loss: 0.8724, Accuracy: 36430/60000 (60.7%)
-Test set: Average loss: 1.065, Accuracy: 5553/10000 (55.5%)
+Training set: Average loss: 0.8716, Accuracy: 36407/60000 (60.7%)
+Test set: Average loss: 1.0373, Accuracy: 5624/10000 (56.2%)
 Rank 10/10.
 Train Epoch: 36/40
 Epoch training took 22s.
-Training set: Average loss: 0.8739, Accuracy: 36304/60000 (60.5%)
-Test set: Average loss: 1.0744, Accuracy: 5514/10000 (55.1%)
+Training set: Average loss: 0.8617, Accuracy: 36825/60000 (61.4%)
+Test set: Average loss: 1.0315, Accuracy: 5666/10000 (56.7%)
 Rank 10/10.
 Train Epoch: 37/40
-Epoch training took 22s.
-Training set: Average loss: 0.8783, Accuracy: 36161/60000 (60.3%)
-Test set: Average loss: 1.074, Accuracy: 5505/10000 (55.0%)
+Epoch training took 23s.
+Training set: Average loss: 0.8511, Accuracy: 37146/60000 (61.9%)
+Test set: Average loss: 1.019, Accuracy: 5727/10000 (57.3%)
 Rank 10/10.
 Train Epoch: 38/40
-Epoch training took 22s.
-Training set: Average loss: 0.8609, Accuracy: 37213/60000 (62.0%)
-Test set: Average loss: 1.0537, Accuracy: 5674/10000 (56.7%)
+Epoch training took 23s.
+Training set: Average loss: 0.8339, Accuracy: 37729/60000 (62.9%)
+Test set: Average loss: 1.0134, Accuracy: 5766/10000 (57.7%)
 Rank 10/10.
 Train Epoch: 39/40
-Epoch training took 22s.
-Training set: Average loss: 0.8792, Accuracy: 36064/60000 (60.1%)
-Test set: Average loss: 1.0788, Accuracy: 5526/10000 (55.3%)
+Epoch training took 23s.
+Training set: Average loss: 0.8387, Accuracy: 37322/60000 (62.2%)
+Test set: Average loss: 1.0244, Accuracy: 5701/10000 (57.0%)
 Rank 10/10.
 Train Epoch: 40/40
-Epoch training took 22s.
-Training set: Average loss: 0.9045, Accuracy: 35745/60000 (59.6%)
-Test set: Average loss: 1.1047, Accuracy: 5512/10000 (55.1%)
-Rank 10/10.
-Done! Avg time per epoch 22s.
+Epoch training took 23s.
+Training set: Average loss: 0.8505, Accuracy: 36369/60000 (60.6%)
+Test set: Average loss: 1.0298, Accuracy: 5562/10000 (55.6%)
+Rank 9/10.
+Done! Avg time per epoch 23s.
 Total time 15 min.
 
 For seed 2/10
-{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
+{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'mixtures': 0, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
 Training a model on mnist using cuda and plif activation.
+The model has 137280 trainable parameters.
 Train Epoch: 1/40
-Epoch training took 22s.
-Training set: Average loss: 2.3033, Accuracy: 5842/60000 (9.7%)
-Test set: Average loss: 2.3028, Accuracy: 982/10000 (9.8%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0313, Accuracy: 38723/60000 (64.5%)
+Test set: Average loss: 1.0537, Accuracy: 6463/10000 (64.6%)
+Rank 10/10.
 Train Epoch: 2/40
-Epoch training took 22s.
-Training set: Average loss: 2.3013, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3012, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.6459, Accuracy: 46994/60000 (78.3%)
+Test set: Average loss: 0.6715, Accuracy: 7804/10000 (78.0%)
+Rank 10/10.
 Train Epoch: 3/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.4948, Accuracy: 49146/60000 (81.9%)
+Test set: Average loss: 0.5282, Accuracy: 8141/10000 (81.4%)
+Rank 10/10.
 Train Epoch: 4/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.436, Accuracy: 49377/60000 (82.3%)
+Test set: Average loss: 0.4805, Accuracy: 8131/10000 (81.3%)
+Rank 10/10.
 Train Epoch: 5/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.4059, Accuracy: 49771/60000 (83.0%)
+Test set: Average loss: 0.4461, Accuracy: 8222/10000 (82.2%)
+Rank 10/10.
 Train Epoch: 6/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.3655, Accuracy: 50716/60000 (84.5%)
+Test set: Average loss: 0.4248, Accuracy: 8312/10000 (83.1%)
+Rank 10/10.
 Train Epoch: 7/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.3473, Accuracy: 50891/60000 (84.8%)
+Test set: Average loss: 0.409, Accuracy: 8350/10000 (83.5%)
+Rank 10/10.
 Train Epoch: 8/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.3354, Accuracy: 51187/60000 (85.3%)
+Test set: Average loss: 0.3982, Accuracy: 8392/10000 (83.9%)
+Rank 10/10.
 Train Epoch: 9/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.318, Accuracy: 51344/60000 (85.6%)
+Test set: Average loss: 0.3898, Accuracy: 8381/10000 (83.8%)
+Rank 10/10.
 Train Epoch: 10/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.2544, Accuracy: 55738/60000 (92.9%)
+Test set: Average loss: 0.3236, Accuracy: 9100/10000 (91.0%)
+Rank 10/10.
 Train Epoch: 11/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.2283, Accuracy: 56132/60000 (93.6%)
+Test set: Average loss: 0.304, Accuracy: 9159/10000 (91.6%)
+Rank 10/10.
 Train Epoch: 12/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.2138, Accuracy: 56367/60000 (93.9%)
+Test set: Average loss: 0.2927, Accuracy: 9223/10000 (92.2%)
+Rank 10/10.
 Train Epoch: 13/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.2017, Accuracy: 56579/60000 (94.3%)
+Test set: Average loss: 0.287, Accuracy: 9212/10000 (92.1%)
+Rank 10/10.
 Train Epoch: 14/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.207, Accuracy: 56266/60000 (93.8%)
+Test set: Average loss: 0.3046, Accuracy: 9172/10000 (91.7%)
+Rank 10/10.
 Train Epoch: 15/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.1723, Accuracy: 56988/60000 (95.0%)
+Test set: Average loss: 0.2723, Accuracy: 9255/10000 (92.5%)
+Rank 10/10.
 Train Epoch: 16/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.1745, Accuracy: 56969/60000 (94.9%)
+Test set: Average loss: 0.2778, Accuracy: 9235/10000 (92.3%)
+Rank 10/10.
 Train Epoch: 17/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.1738, Accuracy: 56941/60000 (94.9%)
+Test set: Average loss: 0.29, Accuracy: 9190/10000 (91.9%)
+Rank 10/10.
 Train Epoch: 18/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1734, Accuracy: 56822/60000 (94.7%)
+Test set: Average loss: 0.3069, Accuracy: 9167/10000 (91.7%)
+Rank 10/10.
 Train Epoch: 19/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1537, Accuracy: 57209/60000 (95.3%)
+Test set: Average loss: 0.2842, Accuracy: 9251/10000 (92.5%)
+Rank 10/10.
 Train Epoch: 20/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1474, Accuracy: 57369/60000 (95.6%)
+Test set: Average loss: 0.2759, Accuracy: 9249/10000 (92.5%)
+Rank 10/10.
 Train Epoch: 21/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.154, Accuracy: 57268/60000 (95.4%)
+Test set: Average loss: 0.2761, Accuracy: 9283/10000 (92.8%)
+Rank 10/10.
 Train Epoch: 22/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1496, Accuracy: 57260/60000 (95.4%)
+Test set: Average loss: 0.2829, Accuracy: 9252/10000 (92.5%)
+Rank 10/10.
 Train Epoch: 23/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.138, Accuracy: 57513/60000 (95.9%)
+Test set: Average loss: 0.2848, Accuracy: 9249/10000 (92.5%)
+Rank 10/10.
 Train Epoch: 24/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.138, Accuracy: 57565/60000 (95.9%)
+Test set: Average loss: 0.3048, Accuracy: 9282/10000 (92.8%)
+Rank 10/10.
 Train Epoch: 25/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1359, Accuracy: 57566/60000 (95.9%)
+Test set: Average loss: 0.3002, Accuracy: 9297/10000 (93.0%)
+Rank 10/10.
 Train Epoch: 26/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1235, Accuracy: 57836/60000 (96.4%)
+Test set: Average loss: 0.2781, Accuracy: 9312/10000 (93.1%)
+Rank 10/10.
 Train Epoch: 27/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1434, Accuracy: 57331/60000 (95.6%)
+Test set: Average loss: 0.2976, Accuracy: 9266/10000 (92.7%)
+Rank 10/10.
 Train Epoch: 28/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1298, Accuracy: 57564/60000 (95.9%)
+Test set: Average loss: 0.2951, Accuracy: 9216/10000 (92.2%)
+Rank 10/10.
 Train Epoch: 29/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1198, Accuracy: 57899/60000 (96.5%)
+Test set: Average loss: 0.2788, Accuracy: 9282/10000 (92.8%)
+Rank 10/10.
 Train Epoch: 30/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1251, Accuracy: 57721/60000 (96.2%)
+Test set: Average loss: 0.2925, Accuracy: 9266/10000 (92.7%)
+Rank 10/10.
 Train Epoch: 31/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.1202, Accuracy: 57811/60000 (96.4%)
+Test set: Average loss: 0.3025, Accuracy: 9223/10000 (92.2%)
+Rank 10/10.
 Train Epoch: 32/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.108, Accuracy: 58080/60000 (96.8%)
+Test set: Average loss: 0.2837, Accuracy: 9269/10000 (92.7%)
+Rank 10/10.
 Train Epoch: 33/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.1138, Accuracy: 57954/60000 (96.6%)
+Test set: Average loss: 0.3001, Accuracy: 9254/10000 (92.5%)
+Rank 10/10.
 Train Epoch: 34/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3012, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.1082, Accuracy: 58086/60000 (96.8%)
+Test set: Average loss: 0.2978, Accuracy: 9284/10000 (92.8%)
+Rank 10/10.
 Train Epoch: 35/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.1131, Accuracy: 57906/60000 (96.5%)
+Test set: Average loss: 0.3181, Accuracy: 9207/10000 (92.1%)
+Rank 10/10.
 Train Epoch: 36/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.1015, Accuracy: 58193/60000 (97.0%)
+Test set: Average loss: 0.296, Accuracy: 9277/10000 (92.8%)
+Rank 10/10.
 Train Epoch: 37/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1128, Accuracy: 57946/60000 (96.6%)
+Test set: Average loss: 0.3088, Accuracy: 9221/10000 (92.2%)
+Rank 10/10.
 Train Epoch: 38/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1031, Accuracy: 58127/60000 (96.9%)
+Test set: Average loss: 0.3078, Accuracy: 9252/10000 (92.5%)
+Rank 10/10.
 Train Epoch: 39/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1014, Accuracy: 58171/60000 (97.0%)
+Test set: Average loss: 0.3163, Accuracy: 9250/10000 (92.5%)
+Rank 10/10.
 Train Epoch: 40/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
-Done! Avg time per epoch 22s.
+Epoch training took 23s.
+Training set: Average loss: 0.0973, Accuracy: 58313/60000 (97.2%)
+Test set: Average loss: 0.3049, Accuracy: 9298/10000 (93.0%)
+Rank 10/10.
+Done! Avg time per epoch 23s.
 Total time 15 min.
 
 For seed 3/10
-{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
+{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'mixtures': 0, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
 Training a model on mnist using cuda and plif activation.
+The model has 137280 trainable parameters.
 Train Epoch: 1/40
-Epoch training took 22s.
-Training set: Average loss: 1.8558, Accuracy: 16001/60000 (26.7%)
-Test set: Average loss: 1.8572, Accuracy: 2724/10000 (27.2%)
-Rank 5/10.
+Epoch training took 23s.
+Training set: Average loss: 1.2601, Accuracy: 30412/60000 (50.7%)
+Test set: Average loss: 1.2694, Accuracy: 5101/10000 (51.0%)
+Rank 10/10.
 Train Epoch: 2/40
-Epoch training took 22s.
-Training set: Average loss: 1.7541, Accuracy: 18265/60000 (30.4%)
-Test set: Average loss: 1.7572, Accuracy: 3030/10000 (30.3%)
-Rank 5/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0538, Accuracy: 33091/60000 (55.2%)
+Test set: Average loss: 1.0654, Accuracy: 5469/10000 (54.7%)
+Rank 10/10.
 Train Epoch: 3/40
-Epoch training took 22s.
-Training set: Average loss: 1.7134, Accuracy: 18492/60000 (30.8%)
-Test set: Average loss: 1.7165, Accuracy: 3067/10000 (30.7%)
-Rank 6/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9487, Accuracy: 33796/60000 (56.3%)
+Test set: Average loss: 0.97, Accuracy: 5573/10000 (55.7%)
+Rank 10/10.
 Train Epoch: 4/40
-Epoch training took 22s.
-Training set: Average loss: 1.7012, Accuracy: 18561/60000 (30.9%)
-Test set: Average loss: 1.7023, Accuracy: 3089/10000 (30.9%)
-Rank 6/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9149, Accuracy: 34372/60000 (57.3%)
+Test set: Average loss: 0.9324, Accuracy: 5702/10000 (57.0%)
+Rank 10/10.
 Train Epoch: 5/40
-Epoch training took 22s.
-Training set: Average loss: 1.6888, Accuracy: 18509/60000 (30.8%)
-Test set: Average loss: 1.695, Accuracy: 3076/10000 (30.8%)
-Rank 7/10.
+Epoch training took 23s.
+Training set: Average loss: 0.7016, Accuracy: 42115/60000 (70.2%)
+Test set: Average loss: 0.7199, Accuracy: 7051/10000 (70.5%)
+Rank 10/10.
 Train Epoch: 6/40
-Epoch training took 22s.
-Training set: Average loss: 1.6276, Accuracy: 22214/60000 (37.0%)
-Test set: Average loss: 1.6335, Accuracy: 3716/10000 (37.2%)
+Epoch training took 23s.
+Training set: Average loss: 0.5492, Accuracy: 47610/60000 (79.3%)
+Test set: Average loss: 0.5844, Accuracy: 7850/10000 (78.5%)
 Rank 10/10.
 Train Epoch: 7/40
-Epoch training took 22s.
-Training set: Average loss: 1.4084, Accuracy: 23909/60000 (39.8%)
-Test set: Average loss: 1.4147, Accuracy: 3967/10000 (39.7%)
-Rank 9/10.
+Epoch training took 23s.
+Training set: Average loss: 0.4202, Accuracy: 51231/60000 (85.4%)
+Test set: Average loss: 0.4657, Accuracy: 8424/10000 (84.2%)
+Rank 10/10.
 Train Epoch: 8/40
-Epoch training took 22s.
-Training set: Average loss: 1.3684, Accuracy: 24260/60000 (40.4%)
-Test set: Average loss: 1.3765, Accuracy: 4049/10000 (40.5%)
-Rank 9/10.
+Epoch training took 23s.
+Training set: Average loss: 0.316, Accuracy: 55149/60000 (91.9%)
+Test set: Average loss: 0.3644, Accuracy: 9060/10000 (90.6%)
+Rank 10/10.
 Train Epoch: 9/40
-Epoch training took 22s.
-Training set: Average loss: 1.352, Accuracy: 26308/60000 (43.8%)
-Test set: Average loss: 1.3696, Accuracy: 4389/10000 (43.9%)
-Rank 9/10.
+Epoch training took 23s.
+Training set: Average loss: 0.2856, Accuracy: 55504/60000 (92.5%)
+Test set: Average loss: 0.3513, Accuracy: 9080/10000 (90.8%)
+Rank 10/10.
 Train Epoch: 10/40
-Epoch training took 22s.
-Training set: Average loss: 1.3137, Accuracy: 27130/60000 (45.2%)
-Test set: Average loss: 1.3288, Accuracy: 4549/10000 (45.5%)
-Rank 9/10.
+Epoch training took 23s.
+Training set: Average loss: 0.2623, Accuracy: 55778/60000 (93.0%)
+Test set: Average loss: 0.3425, Accuracy: 9115/10000 (91.2%)
+Rank 10/10.
 Train Epoch: 11/40
-Epoch training took 22s.
-Training set: Average loss: 1.3082, Accuracy: 28323/60000 (47.2%)
-Test set: Average loss: 1.3288, Accuracy: 4714/10000 (47.1%)
-Rank 9/10.
+Epoch training took 23s.
+Training set: Average loss: 0.2219, Accuracy: 56547/60000 (94.2%)
+Test set: Average loss: 0.3119, Accuracy: 9165/10000 (91.7%)
+Rank 10/10.
 Train Epoch: 12/40
-Epoch training took 22s.
-Training set: Average loss: 1.292, Accuracy: 28793/60000 (48.0%)
-Test set: Average loss: 1.317, Accuracy: 4784/10000 (47.8%)
-Rank 9/10.
+Epoch training took 23s.
+Training set: Average loss: 0.2034, Accuracy: 56812/60000 (94.7%)
+Test set: Average loss: 0.3099, Accuracy: 9184/10000 (91.8%)
+Rank 10/10.
 Train Epoch: 13/40
 Epoch training took 22s.
-Training set: Average loss: 1.2772, Accuracy: 28744/60000 (47.9%)
-Test set: Average loss: 1.3107, Accuracy: 4755/10000 (47.5%)
-Rank 8/10.
+Training set: Average loss: 0.1915, Accuracy: 57071/60000 (95.1%)
+Test set: Average loss: 0.2996, Accuracy: 9209/10000 (92.1%)
+Rank 10/10.
 Train Epoch: 14/40
 Epoch training took 22s.
-Training set: Average loss: 1.2865, Accuracy: 29080/60000 (48.5%)
-Test set: Average loss: 1.3195, Accuracy: 4824/10000 (48.2%)
-Rank 8/10.
+Training set: Average loss: 0.1847, Accuracy: 57145/60000 (95.2%)
+Test set: Average loss: 0.3055, Accuracy: 9210/10000 (92.1%)
+Rank 10/10.
 Train Epoch: 15/40
-Epoch training took 22s.
-Training set: Average loss: 1.2577, Accuracy: 29031/60000 (48.4%)
-Test set: Average loss: 1.2966, Accuracy: 4771/10000 (47.7%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1723, Accuracy: 57327/60000 (95.5%)
+Test set: Average loss: 0.2937, Accuracy: 9232/10000 (92.3%)
+Rank 10/10.
 Train Epoch: 16/40
-Epoch training took 22s.
-Training set: Average loss: 1.2505, Accuracy: 29114/60000 (48.5%)
-Test set: Average loss: 1.2906, Accuracy: 4800/10000 (48.0%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1708, Accuracy: 57245/60000 (95.4%)
+Test set: Average loss: 0.3065, Accuracy: 9221/10000 (92.2%)
+Rank 10/10.
 Train Epoch: 17/40
-Epoch training took 22s.
-Training set: Average loss: 1.2498, Accuracy: 29215/60000 (48.7%)
-Test set: Average loss: 1.2872, Accuracy: 4808/10000 (48.1%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1564, Accuracy: 57501/60000 (95.8%)
+Test set: Average loss: 0.2983, Accuracy: 9220/10000 (92.2%)
+Rank 10/10.
 Train Epoch: 18/40
-Epoch training took 22s.
-Training set: Average loss: 1.2205, Accuracy: 29103/60000 (48.5%)
-Test set: Average loss: 1.272, Accuracy: 4756/10000 (47.6%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1604, Accuracy: 57305/60000 (95.5%)
+Test set: Average loss: 0.3038, Accuracy: 9222/10000 (92.2%)
+Rank 10/10.
 Train Epoch: 19/40
-Epoch training took 22s.
-Training set: Average loss: 1.2201, Accuracy: 29268/60000 (48.8%)
-Test set: Average loss: 1.2595, Accuracy: 4801/10000 (48.0%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1726, Accuracy: 57212/60000 (95.4%)
+Test set: Average loss: 0.3302, Accuracy: 9162/10000 (91.6%)
+Rank 10/10.
 Train Epoch: 20/40
-Epoch training took 22s.
-Training set: Average loss: 1.2133, Accuracy: 29130/60000 (48.5%)
-Test set: Average loss: 1.2674, Accuracy: 4795/10000 (48.0%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1449, Accuracy: 57812/60000 (96.4%)
+Test set: Average loss: 0.3146, Accuracy: 9231/10000 (92.3%)
+Rank 10/10.
 Train Epoch: 21/40
-Epoch training took 22s.
-Training set: Average loss: 1.2136, Accuracy: 29288/60000 (48.8%)
-Test set: Average loss: 1.2684, Accuracy: 4791/10000 (47.9%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1443, Accuracy: 57620/60000 (96.0%)
+Test set: Average loss: 0.3194, Accuracy: 9190/10000 (91.9%)
+Rank 10/10.
 Train Epoch: 22/40
-Epoch training took 22s.
-Training set: Average loss: 1.2074, Accuracy: 29295/60000 (48.8%)
-Test set: Average loss: 1.2661, Accuracy: 4771/10000 (47.7%)
-Rank 9/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1463, Accuracy: 57551/60000 (95.9%)
+Test set: Average loss: 0.3364, Accuracy: 9178/10000 (91.8%)
+Rank 10/10.
 Train Epoch: 23/40
-Epoch training took 22s.
-Training set: Average loss: 1.2264, Accuracy: 29248/60000 (48.7%)
-Test set: Average loss: 1.2762, Accuracy: 4771/10000 (47.7%)
-Rank 9/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1378, Accuracy: 57657/60000 (96.1%)
+Test set: Average loss: 0.3143, Accuracy: 9198/10000 (92.0%)
+Rank 10/10.
 Train Epoch: 24/40
-Epoch training took 22s.
-Training set: Average loss: 1.2202, Accuracy: 29033/60000 (48.4%)
-Test set: Average loss: 1.2762, Accuracy: 4753/10000 (47.5%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1154, Accuracy: 58190/60000 (97.0%)
+Test set: Average loss: 0.3007, Accuracy: 9278/10000 (92.8%)
+Rank 10/10.
 Train Epoch: 25/40
-Epoch training took 22s.
-Training set: Average loss: 1.1973, Accuracy: 29372/60000 (49.0%)
-Test set: Average loss: 1.2607, Accuracy: 4802/10000 (48.0%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1118, Accuracy: 58265/60000 (97.1%)
+Test set: Average loss: 0.3056, Accuracy: 9262/10000 (92.6%)
+Rank 10/10.
 Train Epoch: 26/40
-Epoch training took 22s.
-Training set: Average loss: 1.2104, Accuracy: 29195/60000 (48.7%)
-Test set: Average loss: 1.2689, Accuracy: 4762/10000 (47.6%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1122, Accuracy: 58267/60000 (97.1%)
+Test set: Average loss: 0.3106, Accuracy: 9249/10000 (92.5%)
+Rank 10/10.
 Train Epoch: 27/40
 Epoch training took 22s.
-Training set: Average loss: 1.2011, Accuracy: 29344/60000 (48.9%)
-Test set: Average loss: 1.2677, Accuracy: 4788/10000 (47.9%)
-Rank 9/10.
+Training set: Average loss: 0.1076, Accuracy: 58313/60000 (97.2%)
+Test set: Average loss: 0.3218, Accuracy: 9229/10000 (92.3%)
+Rank 10/10.
 Train Epoch: 28/40
-Epoch training took 22s.
-Training set: Average loss: 1.1975, Accuracy: 29174/60000 (48.6%)
-Test set: Average loss: 1.271, Accuracy: 4756/10000 (47.6%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1066, Accuracy: 58301/60000 (97.2%)
+Test set: Average loss: 0.3066, Accuracy: 9262/10000 (92.6%)
+Rank 10/10.
 Train Epoch: 29/40
 Epoch training took 22s.
-Training set: Average loss: 1.1917, Accuracy: 29298/60000 (48.8%)
-Test set: Average loss: 1.261, Accuracy: 4768/10000 (47.7%)
-Rank 9/10.
+Training set: Average loss: 0.1023, Accuracy: 58401/60000 (97.3%)
+Test set: Average loss: 0.3234, Accuracy: 9217/10000 (92.2%)
+Rank 10/10.
 Train Epoch: 30/40
 Epoch training took 22s.
-Training set: Average loss: 1.2076, Accuracy: 29429/60000 (49.0%)
-Test set: Average loss: 1.2771, Accuracy: 4793/10000 (47.9%)
-Rank 9/10.
+Training set: Average loss: 0.1021, Accuracy: 58334/60000 (97.2%)
+Test set: Average loss: 0.3224, Accuracy: 9216/10000 (92.2%)
+Rank 10/10.
 Train Epoch: 31/40
-Epoch training took 22s.
-Training set: Average loss: 1.2078, Accuracy: 29299/60000 (48.8%)
-Test set: Average loss: 1.2829, Accuracy: 4754/10000 (47.5%)
-Rank 9/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1014, Accuracy: 58383/60000 (97.3%)
+Test set: Average loss: 0.3368, Accuracy: 9229/10000 (92.3%)
+Rank 10/10.
 Train Epoch: 32/40
 Epoch training took 22s.
-Training set: Average loss: 1.2081, Accuracy: 29053/60000 (48.4%)
-Test set: Average loss: 1.2924, Accuracy: 4718/10000 (47.2%)
-Rank 9/10.
+Training set: Average loss: 0.0983, Accuracy: 58425/60000 (97.4%)
+Test set: Average loss: 0.3348, Accuracy: 9228/10000 (92.3%)
+Rank 10/10.
 Train Epoch: 33/40
 Epoch training took 22s.
-Training set: Average loss: 1.2296, Accuracy: 29490/60000 (49.1%)
-Test set: Average loss: 1.3019, Accuracy: 4805/10000 (48.0%)
-Rank 9/10.
+Training set: Average loss: 0.1057, Accuracy: 58309/60000 (97.2%)
+Test set: Average loss: 0.3384, Accuracy: 9226/10000 (92.3%)
+Rank 10/10.
 Train Epoch: 34/40
 Epoch training took 22s.
-Training set: Average loss: 1.2036, Accuracy: 29330/60000 (48.9%)
-Test set: Average loss: 1.2802, Accuracy: 4771/10000 (47.7%)
+Training set: Average loss: 0.0999, Accuracy: 58410/60000 (97.3%)
+Test set: Average loss: 0.3422, Accuracy: 9213/10000 (92.1%)
 Rank 10/10.
 Train Epoch: 35/40
-Epoch training took 22s.
-Training set: Average loss: 1.2049, Accuracy: 29211/60000 (48.7%)
-Test set: Average loss: 1.2777, Accuracy: 4739/10000 (47.4%)
+Epoch training took 23s.
+Training set: Average loss: 0.0955, Accuracy: 58492/60000 (97.5%)
+Test set: Average loss: 0.3464, Accuracy: 9219/10000 (92.2%)
 Rank 10/10.
 Train Epoch: 36/40
-Epoch training took 22s.
-Training set: Average loss: 1.1859, Accuracy: 29376/60000 (49.0%)
-Test set: Average loss: 1.2739, Accuracy: 4762/10000 (47.6%)
-Rank 9/10.
+Epoch training took 23s.
+Training set: Average loss: 0.0928, Accuracy: 58513/60000 (97.5%)
+Test set: Average loss: 0.3412, Accuracy: 9191/10000 (91.9%)
+Rank 10/10.
 Train Epoch: 37/40
-Epoch training took 22s.
-Training set: Average loss: 1.1853, Accuracy: 29300/60000 (48.8%)
-Test set: Average loss: 1.2715, Accuracy: 4745/10000 (47.5%)
-Rank 9/10.
+Epoch training took 23s.
+Training set: Average loss: 0.0873, Accuracy: 58653/60000 (97.8%)
+Test set: Average loss: 0.3433, Accuracy: 9241/10000 (92.4%)
+Rank 10/10.
 Train Epoch: 38/40
-Epoch training took 22s.
-Training set: Average loss: 1.211, Accuracy: 29210/60000 (48.7%)
-Test set: Average loss: 1.2975, Accuracy: 4726/10000 (47.3%)
-Rank 9/10.
+Epoch training took 23s.
+Training set: Average loss: 0.0854, Accuracy: 58692/60000 (97.8%)
+Test set: Average loss: 0.3544, Accuracy: 9236/10000 (92.4%)
+Rank 10/10.
 Train Epoch: 39/40
-Epoch training took 22s.
-Training set: Average loss: 1.1801, Accuracy: 29311/60000 (48.9%)
-Test set: Average loss: 1.2809, Accuracy: 4736/10000 (47.4%)
+Epoch training took 23s.
+Training set: Average loss: 0.1062, Accuracy: 58203/60000 (97.0%)
+Test set: Average loss: 0.3739, Accuracy: 9156/10000 (91.6%)
 Rank 10/10.
 Train Epoch: 40/40
-Epoch training took 22s.
-Training set: Average loss: 1.1974, Accuracy: 29202/60000 (48.7%)
-Test set: Average loss: 1.2952, Accuracy: 4694/10000 (46.9%)
+Epoch training took 23s.
+Training set: Average loss: 0.0996, Accuracy: 58303/60000 (97.2%)
+Test set: Average loss: 0.3721, Accuracy: 9167/10000 (91.7%)
 Rank 10/10.
-Done! Avg time per epoch 22s.
+Done! Avg time per epoch 23s.
 Total time 15 min.
 
 For seed 4/10
-{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
+{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'mixtures': 0, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
 Training a model on mnist using cuda and plif activation.
+The model has 137280 trainable parameters.
 Train Epoch: 1/40
-Epoch training took 22s.
-Training set: Average loss: 2.3026, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3026, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.7587, Accuracy: 14904/60000 (24.8%)
+Test set: Average loss: 1.7515, Accuracy: 2463/10000 (24.6%)
+Rank 7/10.
 Train Epoch: 2/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3012, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.5962, Accuracy: 16111/60000 (26.9%)
+Test set: Average loss: 1.5913, Accuracy: 2620/10000 (26.2%)
+Rank 8/10.
 Train Epoch: 3/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 1.5014, Accuracy: 18480/60000 (30.8%)
+Test set: Average loss: 1.4981, Accuracy: 3074/10000 (30.7%)
+Rank 8/10.
 Train Epoch: 4/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 1.4518, Accuracy: 22814/60000 (38.0%)
+Test set: Average loss: 1.4591, Accuracy: 3754/10000 (37.5%)
+Rank 8/10.
 Train Epoch: 5/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 1.3574, Accuracy: 26267/60000 (43.8%)
+Test set: Average loss: 1.3722, Accuracy: 4314/10000 (43.1%)
+Rank 8/10.
 Train Epoch: 6/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 1.2834, Accuracy: 27007/60000 (45.0%)
+Test set: Average loss: 1.2994, Accuracy: 4486/10000 (44.9%)
+Rank 8/10.
 Train Epoch: 7/40
 Epoch training took 22s.
-Training set: Average loss: 2.3013, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 1.245, Accuracy: 27408/60000 (45.7%)
+Test set: Average loss: 1.2667, Accuracy: 4513/10000 (45.1%)
+Rank 8/10.
 Train Epoch: 8/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 1.211, Accuracy: 28374/60000 (47.3%)
+Test set: Average loss: 1.2393, Accuracy: 4647/10000 (46.5%)
+Rank 8/10.
 Train Epoch: 9/40
-Epoch training took 22s.
-Training set: Average loss: 2.3013, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1915, Accuracy: 29161/60000 (48.6%)
+Test set: Average loss: 1.2106, Accuracy: 4804/10000 (48.0%)
+Rank 8/10.
 Train Epoch: 10/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1827, Accuracy: 28884/60000 (48.1%)
+Test set: Average loss: 1.2079, Accuracy: 4766/10000 (47.7%)
+Rank 8/10.
 Train Epoch: 11/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1571, Accuracy: 30409/60000 (50.7%)
+Test set: Average loss: 1.1941, Accuracy: 4977/10000 (49.8%)
+Rank 8/10.
 Train Epoch: 12/40
-Epoch training took 22s.
-Training set: Average loss: 2.3013, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3012, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1624, Accuracy: 30340/60000 (50.6%)
+Test set: Average loss: 1.194, Accuracy: 4951/10000 (49.5%)
+Rank 8/10.
 Train Epoch: 13/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1361, Accuracy: 31654/60000 (52.8%)
+Test set: Average loss: 1.1745, Accuracy: 5197/10000 (52.0%)
+Rank 8/10.
 Train Epoch: 14/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1305, Accuracy: 32087/60000 (53.5%)
+Test set: Average loss: 1.1737, Accuracy: 5248/10000 (52.5%)
+Rank 8/10.
 Train Epoch: 15/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1122, Accuracy: 32527/60000 (54.2%)
+Test set: Average loss: 1.1512, Accuracy: 5327/10000 (53.3%)
+Rank 8/10.
 Train Epoch: 16/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3012, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1034, Accuracy: 32477/60000 (54.1%)
+Test set: Average loss: 1.1484, Accuracy: 5285/10000 (52.9%)
+Rank 8/10.
 Train Epoch: 17/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0886, Accuracy: 32927/60000 (54.9%)
+Test set: Average loss: 1.1269, Accuracy: 5395/10000 (54.0%)
+Rank 8/10.
 Train Epoch: 18/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0883, Accuracy: 32998/60000 (55.0%)
+Test set: Average loss: 1.1389, Accuracy: 5346/10000 (53.5%)
+Rank 8/10.
 Train Epoch: 19/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0748, Accuracy: 33150/60000 (55.2%)
+Test set: Average loss: 1.126, Accuracy: 5363/10000 (53.6%)
+Rank 8/10.
 Train Epoch: 20/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 1.0735, Accuracy: 33498/60000 (55.8%)
+Test set: Average loss: 1.1234, Accuracy: 5470/10000 (54.7%)
+Rank 8/10.
 Train Epoch: 21/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 1.0697, Accuracy: 33313/60000 (55.5%)
+Test set: Average loss: 1.1235, Accuracy: 5406/10000 (54.1%)
+Rank 8/10.
 Train Epoch: 22/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3012, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 1.068, Accuracy: 33237/60000 (55.4%)
+Test set: Average loss: 1.1142, Accuracy: 5433/10000 (54.3%)
+Rank 8/10.
 Train Epoch: 23/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 1.0585, Accuracy: 33553/60000 (55.9%)
+Test set: Average loss: 1.1077, Accuracy: 5424/10000 (54.2%)
+Rank 8/10.
 Train Epoch: 24/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 1.0713, Accuracy: 33081/60000 (55.1%)
+Test set: Average loss: 1.1308, Accuracy: 5336/10000 (53.4%)
+Rank 8/10.
 Train Epoch: 25/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3012, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 1.0506, Accuracy: 33701/60000 (56.2%)
+Test set: Average loss: 1.1052, Accuracy: 5489/10000 (54.9%)
+Rank 8/10.
 Train Epoch: 26/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 1.04, Accuracy: 33916/60000 (56.5%)
+Test set: Average loss: 1.102, Accuracy: 5488/10000 (54.9%)
+Rank 8/10.
 Train Epoch: 27/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 1.0699, Accuracy: 32648/60000 (54.4%)
+Test set: Average loss: 1.1271, Accuracy: 5301/10000 (53.0%)
+Rank 8/10.
 Train Epoch: 28/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 1.0493, Accuracy: 33706/60000 (56.2%)
+Test set: Average loss: 1.1212, Accuracy: 5430/10000 (54.3%)
+Rank 8/10.
 Train Epoch: 29/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0404, Accuracy: 34128/60000 (56.9%)
+Test set: Average loss: 1.0914, Accuracy: 5553/10000 (55.5%)
+Rank 8/10.
 Train Epoch: 30/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0423, Accuracy: 33647/60000 (56.1%)
+Test set: Average loss: 1.1089, Accuracy: 5417/10000 (54.2%)
+Rank 8/10.
 Train Epoch: 31/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0351, Accuracy: 33620/60000 (56.0%)
+Test set: Average loss: 1.0926, Accuracy: 5471/10000 (54.7%)
+Rank 8/10.
 Train Epoch: 32/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0299, Accuracy: 34165/60000 (56.9%)
+Test set: Average loss: 1.0904, Accuracy: 5529/10000 (55.3%)
+Rank 9/10.
 Train Epoch: 33/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0326, Accuracy: 33567/60000 (55.9%)
+Test set: Average loss: 1.0945, Accuracy: 5446/10000 (54.5%)
+Rank 8/10.
 Train Epoch: 34/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0184, Accuracy: 34187/60000 (57.0%)
+Test set: Average loss: 1.0947, Accuracy: 5502/10000 (55.0%)
+Rank 8/10.
 Train Epoch: 35/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0262, Accuracy: 34269/60000 (57.1%)
+Test set: Average loss: 1.0915, Accuracy: 5548/10000 (55.5%)
+Rank 9/10.
 Train Epoch: 36/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0172, Accuracy: 33855/60000 (56.4%)
+Test set: Average loss: 1.0889, Accuracy: 5484/10000 (54.8%)
+Rank 9/10.
 Train Epoch: 37/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 1.0287, Accuracy: 34233/60000 (57.1%)
+Test set: Average loss: 1.0937, Accuracy: 5539/10000 (55.4%)
+Rank 9/10.
 Train Epoch: 38/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 1.0176, Accuracy: 34081/60000 (56.8%)
+Test set: Average loss: 1.0908, Accuracy: 5509/10000 (55.1%)
+Rank 9/10.
 Train Epoch: 39/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3012, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 1.0197, Accuracy: 34258/60000 (57.1%)
+Test set: Average loss: 1.0933, Accuracy: 5541/10000 (55.4%)
+Rank 8/10.
 Train Epoch: 40/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
-Done! Avg time per epoch 22s.
+Training set: Average loss: 1.0496, Accuracy: 33617/60000 (56.0%)
+Test set: Average loss: 1.1213, Accuracy: 5425/10000 (54.2%)
+Rank 9/10.
+Done! Avg time per epoch 23s.
 Total time 15 min.
 
 For seed 5/10
-{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
+{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'mixtures': 0, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
 Training a model on mnist using cuda and plif activation.
+The model has 137280 trainable parameters.
 Train Epoch: 1/40
 Epoch training took 22s.
-Training set: Average loss: 1.0685, Accuracy: 36425/60000 (60.7%)
-Test set: Average loss: 1.0731, Accuracy: 5985/10000 (59.9%)
-Rank 10/10.
+Training set: Average loss: 1.6735, Accuracy: 16247/60000 (27.1%)
+Test set: Average loss: 1.6703, Accuracy: 2821/10000 (28.2%)
+Rank 7/10.
 Train Epoch: 2/40
 Epoch training took 22s.
-Training set: Average loss: 0.6773, Accuracy: 43209/60000 (72.0%)
-Test set: Average loss: 0.6868, Accuracy: 7136/10000 (71.4%)
-Rank 10/10.
+Training set: Average loss: 1.5, Accuracy: 21106/60000 (35.2%)
+Test set: Average loss: 1.4954, Accuracy: 3557/10000 (35.6%)
+Rank 8/10.
 Train Epoch: 3/40
 Epoch training took 22s.
-Training set: Average loss: 0.5457, Accuracy: 48786/60000 (81.3%)
-Test set: Average loss: 0.5653, Accuracy: 8043/10000 (80.4%)
-Rank 10/10.
+Training set: Average loss: 1.3865, Accuracy: 23234/60000 (38.7%)
+Test set: Average loss: 1.3894, Accuracy: 3890/10000 (38.9%)
+Rank 8/10.
 Train Epoch: 4/40
 Epoch training took 22s.
-Training set: Average loss: 0.4732, Accuracy: 51090/60000 (85.2%)
-Test set: Average loss: 0.5029, Accuracy: 8435/10000 (84.3%)
-Rank 10/10.
+Training set: Average loss: 1.311, Accuracy: 24834/60000 (41.4%)
+Test set: Average loss: 1.3162, Accuracy: 4136/10000 (41.4%)
+Rank 8/10.
 Train Epoch: 5/40
-Epoch training took 22s.
-Training set: Average loss: 0.2987, Accuracy: 55258/60000 (92.1%)
-Test set: Average loss: 0.3291, Accuracy: 9098/10000 (91.0%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.2574, Accuracy: 26483/60000 (44.1%)
+Test set: Average loss: 1.2754, Accuracy: 4324/10000 (43.2%)
+Rank 8/10.
 Train Epoch: 6/40
-Epoch training took 22s.
-Training set: Average loss: 0.2775, Accuracy: 55433/60000 (92.4%)
-Test set: Average loss: 0.3177, Accuracy: 9138/10000 (91.4%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.2183, Accuracy: 27734/60000 (46.2%)
+Test set: Average loss: 1.2395, Accuracy: 4549/10000 (45.5%)
+Rank 8/10.
 Train Epoch: 7/40
-Epoch training took 22s.
-Training set: Average loss: 0.2586, Accuracy: 55533/60000 (92.6%)
-Test set: Average loss: 0.304, Accuracy: 9139/10000 (91.4%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1795, Accuracy: 29241/60000 (48.7%)
+Test set: Average loss: 1.2101, Accuracy: 4850/10000 (48.5%)
+Rank 7/10.
 Train Epoch: 8/40
-Epoch training took 22s.
-Training set: Average loss: 0.2101, Accuracy: 56484/60000 (94.1%)
-Test set: Average loss: 0.2709, Accuracy: 9278/10000 (92.8%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1682, Accuracy: 28474/60000 (47.5%)
+Test set: Average loss: 1.1999, Accuracy: 4711/10000 (47.1%)
+Rank 8/10.
 Train Epoch: 9/40
-Epoch training took 22s.
-Training set: Average loss: 0.1975, Accuracy: 56580/60000 (94.3%)
-Test set: Average loss: 0.2611, Accuracy: 9303/10000 (93.0%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1429, Accuracy: 29189/60000 (48.6%)
+Test set: Average loss: 1.1725, Accuracy: 4780/10000 (47.8%)
+Rank 8/10.
 Train Epoch: 10/40
 Epoch training took 22s.
-Training set: Average loss: 0.1843, Accuracy: 56967/60000 (94.9%)
-Test set: Average loss: 0.2678, Accuracy: 9306/10000 (93.1%)
-Rank 10/10.
+Training set: Average loss: 1.1227, Accuracy: 31555/60000 (52.6%)
+Test set: Average loss: 1.1539, Accuracy: 5186/10000 (51.9%)
+Rank 8/10.
 Train Epoch: 11/40
 Epoch training took 22s.
-Training set: Average loss: 0.1724, Accuracy: 57153/60000 (95.3%)
-Test set: Average loss: 0.2565, Accuracy: 9315/10000 (93.2%)
-Rank 10/10.
+Training set: Average loss: 1.1191, Accuracy: 31452/60000 (52.4%)
+Test set: Average loss: 1.1497, Accuracy: 5165/10000 (51.6%)
+Rank 8/10.
 Train Epoch: 12/40
 Epoch training took 22s.
-Training set: Average loss: 0.1552, Accuracy: 57475/60000 (95.8%)
-Test set: Average loss: 0.2545, Accuracy: 9363/10000 (93.6%)
-Rank 10/10.
+Training set: Average loss: 1.121, Accuracy: 30635/60000 (51.1%)
+Test set: Average loss: 1.1544, Accuracy: 5045/10000 (50.5%)
+Rank 8/10.
 Train Epoch: 13/40
 Epoch training took 22s.
-Training set: Average loss: 0.1699, Accuracy: 57165/60000 (95.3%)
-Test set: Average loss: 0.2792, Accuracy: 9299/10000 (93.0%)
-Rank 10/10.
+Training set: Average loss: 1.1123, Accuracy: 31054/60000 (51.8%)
+Test set: Average loss: 1.1482, Accuracy: 5041/10000 (50.4%)
+Rank 8/10.
 Train Epoch: 14/40
 Epoch training took 22s.
-Training set: Average loss: 0.1759, Accuracy: 56983/60000 (95.0%)
-Test set: Average loss: 0.295, Accuracy: 9267/10000 (92.7%)
-Rank 10/10.
+Training set: Average loss: 1.0819, Accuracy: 32934/60000 (54.9%)
+Test set: Average loss: 1.1293, Accuracy: 5319/10000 (53.2%)
+Rank 8/10.
 Train Epoch: 15/40
-Epoch training took 22s.
-Training set: Average loss: 0.1468, Accuracy: 57572/60000 (96.0%)
-Test set: Average loss: 0.2736, Accuracy: 9352/10000 (93.5%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0866, Accuracy: 32370/60000 (54.0%)
+Test set: Average loss: 1.1343, Accuracy: 5272/10000 (52.7%)
+Rank 8/10.
 Train Epoch: 16/40
-Epoch training took 22s.
-Training set: Average loss: 0.1468, Accuracy: 57590/60000 (96.0%)
-Test set: Average loss: 0.2807, Accuracy: 9327/10000 (93.3%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0534, Accuracy: 33143/60000 (55.2%)
+Test set: Average loss: 1.1018, Accuracy: 5434/10000 (54.3%)
+Rank 8/10.
 Train Epoch: 17/40
-Epoch training took 22s.
-Training set: Average loss: 0.1512, Accuracy: 57458/60000 (95.8%)
-Test set: Average loss: 0.2957, Accuracy: 9320/10000 (93.2%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0539, Accuracy: 33361/60000 (55.6%)
+Test set: Average loss: 1.116, Accuracy: 5380/10000 (53.8%)
+Rank 9/10.
 Train Epoch: 18/40
-Epoch training took 22s.
-Training set: Average loss: 0.1257, Accuracy: 57904/60000 (96.5%)
-Test set: Average loss: 0.2808, Accuracy: 9360/10000 (93.6%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0371, Accuracy: 33480/60000 (55.8%)
+Test set: Average loss: 1.1016, Accuracy: 5367/10000 (53.7%)
+Rank 8/10.
 Train Epoch: 19/40
-Epoch training took 22s.
-Training set: Average loss: 0.1293, Accuracy: 57760/60000 (96.3%)
-Test set: Average loss: 0.2859, Accuracy: 9306/10000 (93.1%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0232, Accuracy: 33791/60000 (56.3%)
+Test set: Average loss: 1.0861, Accuracy: 5466/10000 (54.7%)
+Rank 9/10.
 Train Epoch: 20/40
 Epoch training took 22s.
-Training set: Average loss: 0.1164, Accuracy: 58097/60000 (96.8%)
-Test set: Average loss: 0.2884, Accuracy: 9363/10000 (93.6%)
-Rank 10/10.
+Training set: Average loss: 1.0519, Accuracy: 32823/60000 (54.7%)
+Test set: Average loss: 1.1104, Accuracy: 5304/10000 (53.0%)
+Rank 9/10.
 Train Epoch: 21/40
 Epoch training took 22s.
-Training set: Average loss: 0.1118, Accuracy: 58172/60000 (97.0%)
-Test set: Average loss: 0.2944, Accuracy: 9344/10000 (93.4%)
-Rank 10/10.
+Training set: Average loss: 1.0299, Accuracy: 33500/60000 (55.8%)
+Test set: Average loss: 1.0975, Accuracy: 5381/10000 (53.8%)
+Rank 9/10.
 Train Epoch: 22/40
-Epoch training took 22s.
-Training set: Average loss: 0.1389, Accuracy: 57698/60000 (96.2%)
-Test set: Average loss: 0.3319, Accuracy: 9312/10000 (93.1%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0106, Accuracy: 34077/60000 (56.8%)
+Test set: Average loss: 1.0784, Accuracy: 5491/10000 (54.9%)
+Rank 9/10.
 Train Epoch: 23/40
-Epoch training took 22s.
-Training set: Average loss: 0.1015, Accuracy: 58324/60000 (97.2%)
-Test set: Average loss: 0.2918, Accuracy: 9368/10000 (93.7%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0185, Accuracy: 33744/60000 (56.2%)
+Test set: Average loss: 1.0848, Accuracy: 5466/10000 (54.7%)
+Rank 9/10.
 Train Epoch: 24/40
-Epoch training took 22s.
-Training set: Average loss: 0.1602, Accuracy: 57286/60000 (95.5%)
-Test set: Average loss: 0.3767, Accuracy: 9206/10000 (92.1%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0047, Accuracy: 34330/60000 (57.2%)
+Test set: Average loss: 1.0758, Accuracy: 5522/10000 (55.2%)
+Rank 9/10.
 Train Epoch: 25/40
-Epoch training took 22s.
-Training set: Average loss: 0.0945, Accuracy: 58461/60000 (97.4%)
-Test set: Average loss: 0.3187, Accuracy: 9345/10000 (93.5%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0032, Accuracy: 34415/60000 (57.4%)
+Test set: Average loss: 1.0665, Accuracy: 5529/10000 (55.3%)
+Rank 9/10.
 Train Epoch: 26/40
-Epoch training took 22s.
-Training set: Average loss: 0.1324, Accuracy: 57885/60000 (96.5%)
-Test set: Average loss: 0.368, Accuracy: 9294/10000 (92.9%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9877, Accuracy: 34364/60000 (57.3%)
+Test set: Average loss: 1.0616, Accuracy: 5535/10000 (55.4%)
+Rank 8/10.
 Train Epoch: 27/40
 Epoch training took 22s.
-Training set: Average loss: 0.108, Accuracy: 58220/60000 (97.0%)
-Test set: Average loss: 0.3441, Accuracy: 9328/10000 (93.3%)
-Rank 10/10.
+Training set: Average loss: 1.0102, Accuracy: 33830/60000 (56.4%)
+Test set: Average loss: 1.0941, Accuracy: 5386/10000 (53.9%)
+Rank 8/10.
 Train Epoch: 28/40
 Epoch training took 22s.
-Training set: Average loss: 0.0908, Accuracy: 58548/60000 (97.6%)
-Test set: Average loss: 0.3248, Accuracy: 9354/10000 (93.5%)
-Rank 10/10.
+Training set: Average loss: 0.9875, Accuracy: 34383/60000 (57.3%)
+Test set: Average loss: 1.0738, Accuracy: 5474/10000 (54.7%)
+Rank 8/10.
 Train Epoch: 29/40
-Epoch training took 22s.
-Training set: Average loss: 0.0997, Accuracy: 58362/60000 (97.3%)
-Test set: Average loss: 0.3428, Accuracy: 9331/10000 (93.3%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9891, Accuracy: 34415/60000 (57.4%)
+Test set: Average loss: 1.0651, Accuracy: 5533/10000 (55.3%)
+Rank 8/10.
 Train Epoch: 30/40
-Epoch training took 22s.
-Training set: Average loss: 0.0889, Accuracy: 58562/60000 (97.6%)
-Test set: Average loss: 0.3509, Accuracy: 9325/10000 (93.2%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9875, Accuracy: 34347/60000 (57.2%)
+Test set: Average loss: 1.0769, Accuracy: 5520/10000 (55.2%)
+Rank 9/10.
 Train Epoch: 31/40
-Epoch training took 22s.
-Training set: Average loss: 0.0873, Accuracy: 58590/60000 (97.7%)
-Test set: Average loss: 0.3542, Accuracy: 9331/10000 (93.3%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9873, Accuracy: 34496/60000 (57.5%)
+Test set: Average loss: 1.0703, Accuracy: 5492/10000 (54.9%)
+Rank 8/10.
 Train Epoch: 32/40
-Epoch training took 22s.
-Training set: Average loss: 0.1035, Accuracy: 58317/60000 (97.2%)
-Test set: Average loss: 0.3754, Accuracy: 9298/10000 (93.0%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9786, Accuracy: 34497/60000 (57.5%)
+Test set: Average loss: 1.0706, Accuracy: 5492/10000 (54.9%)
+Rank 9/10.
 Train Epoch: 33/40
 Epoch training took 22s.
-Training set: Average loss: 0.0912, Accuracy: 58500/60000 (97.5%)
-Test set: Average loss: 0.3607, Accuracy: 9289/10000 (92.9%)
-Rank 10/10.
+Training set: Average loss: 0.9932, Accuracy: 34180/60000 (57.0%)
+Test set: Average loss: 1.0709, Accuracy: 5449/10000 (54.5%)
+Rank 8/10.
 Train Epoch: 34/40
 Epoch training took 22s.
-Training set: Average loss: 0.0961, Accuracy: 58422/60000 (97.4%)
-Test set: Average loss: 0.3899, Accuracy: 9286/10000 (92.9%)
-Rank 10/10.
+Training set: Average loss: 0.9725, Accuracy: 34544/60000 (57.6%)
+Test set: Average loss: 1.0611, Accuracy: 5555/10000 (55.5%)
+Rank 9/10.
 Train Epoch: 35/40
 Epoch training took 22s.
-Training set: Average loss: 0.0748, Accuracy: 58799/60000 (98.0%)
-Test set: Average loss: 0.3589, Accuracy: 9339/10000 (93.4%)
-Rank 10/10.
+Training set: Average loss: 0.9699, Accuracy: 34845/60000 (58.1%)
+Test set: Average loss: 1.0644, Accuracy: 5546/10000 (55.5%)
+Rank 8/10.
 Train Epoch: 36/40
 Epoch training took 22s.
-Training set: Average loss: 0.1008, Accuracy: 58348/60000 (97.2%)
-Test set: Average loss: 0.3845, Accuracy: 9285/10000 (92.8%)
-Rank 10/10.
+Training set: Average loss: 0.9765, Accuracy: 34465/60000 (57.4%)
+Test set: Average loss: 1.0719, Accuracy: 5478/10000 (54.8%)
+Rank 9/10.
 Train Epoch: 37/40
-Epoch training took 22s.
-Training set: Average loss: 0.0839, Accuracy: 58579/60000 (97.6%)
-Test set: Average loss: 0.3781, Accuracy: 9301/10000 (93.0%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9672, Accuracy: 34682/60000 (57.8%)
+Test set: Average loss: 1.057, Accuracy: 5553/10000 (55.5%)
+Rank 9/10.
 Train Epoch: 38/40
-Epoch training took 22s.
-Training set: Average loss: 0.0847, Accuracy: 58580/60000 (97.6%)
-Test set: Average loss: 0.3716, Accuracy: 9306/10000 (93.1%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.98, Accuracy: 34651/60000 (57.8%)
+Test set: Average loss: 1.0672, Accuracy: 5507/10000 (55.1%)
+Rank 9/10.
 Train Epoch: 39/40
-Epoch training took 22s.
-Training set: Average loss: 0.0787, Accuracy: 58683/60000 (97.8%)
-Test set: Average loss: 0.3864, Accuracy: 9311/10000 (93.1%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9711, Accuracy: 34517/60000 (57.5%)
+Test set: Average loss: 1.0668, Accuracy: 5500/10000 (55.0%)
+Rank 9/10.
 Train Epoch: 40/40
 Epoch training took 22s.
-Training set: Average loss: 0.0652, Accuracy: 58967/60000 (98.3%)
-Test set: Average loss: 0.3902, Accuracy: 9304/10000 (93.0%)
-Rank 10/10.
-Done! Avg time per epoch 22s.
+Training set: Average loss: 0.9894, Accuracy: 34082/60000 (56.8%)
+Test set: Average loss: 1.0939, Accuracy: 5432/10000 (54.3%)
+Rank 9/10.
+Done! Avg time per epoch 23s.
 Total time 15 min.
 
 For seed 6/10
-{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
+{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'mixtures': 0, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
 Training a model on mnist using cuda and plif activation.
+The model has 137280 trainable parameters.
 Train Epoch: 1/40
-Epoch training took 22s.
-Training set: Average loss: 1.8274, Accuracy: 15600/60000 (26.0%)
-Test set: Average loss: 1.8274, Accuracy: 2609/10000 (26.1%)
-Rank 7/10.
+Epoch training took 23s.
+Training set: Average loss: 1.8042, Accuracy: 16508/60000 (27.5%)
+Test set: Average loss: 1.7973, Accuracy: 2813/10000 (28.1%)
+Rank 6/10.
 Train Epoch: 2/40
-Epoch training took 22s.
-Training set: Average loss: 1.6804, Accuracy: 19016/60000 (31.7%)
-Test set: Average loss: 1.6919, Accuracy: 3208/10000 (32.1%)
+Epoch training took 23s.
+Training set: Average loss: 1.6734, Accuracy: 19194/60000 (32.0%)
+Test set: Average loss: 1.6784, Accuracy: 3211/10000 (32.1%)
 Rank 6/10.
 Train Epoch: 3/40
-Epoch training took 22s.
-Training set: Average loss: 1.6147, Accuracy: 20090/60000 (33.5%)
-Test set: Average loss: 1.631, Accuracy: 3352/10000 (33.5%)
+Epoch training took 23s.
+Training set: Average loss: 1.6215, Accuracy: 19187/60000 (32.0%)
+Test set: Average loss: 1.6316, Accuracy: 3205/10000 (32.0%)
 Rank 6/10.
 Train Epoch: 4/40
 Epoch training took 22s.
-Training set: Average loss: 1.5811, Accuracy: 21990/60000 (36.6%)
-Test set: Average loss: 1.6021, Accuracy: 3664/10000 (36.6%)
+Training set: Average loss: 1.5887, Accuracy: 21414/60000 (35.7%)
+Test set: Average loss: 1.6065, Accuracy: 3587/10000 (35.9%)
 Rank 7/10.
 Train Epoch: 5/40
 Epoch training took 22s.
-Training set: Average loss: 1.5518, Accuracy: 22393/60000 (37.3%)
-Test set: Average loss: 1.5708, Accuracy: 3736/10000 (37.4%)
-Rank 7/10.
+Training set: Average loss: 1.4584, Accuracy: 25970/60000 (43.3%)
+Test set: Average loss: 1.475, Accuracy: 4342/10000 (43.4%)
+Rank 9/10.
 Train Epoch: 6/40
-Epoch training took 22s.
-Training set: Average loss: 1.5182, Accuracy: 23234/60000 (38.7%)
-Test set: Average loss: 1.5431, Accuracy: 3866/10000 (38.7%)
-Rank 7/10.
+Epoch training took 23s.
+Training set: Average loss: 1.2606, Accuracy: 29083/60000 (48.5%)
+Test set: Average loss: 1.2666, Accuracy: 4903/10000 (49.0%)
+Rank 8/10.
 Train Epoch: 7/40
-Epoch training took 22s.
-Training set: Average loss: 1.5175, Accuracy: 23299/60000 (38.8%)
-Test set: Average loss: 1.549, Accuracy: 3887/10000 (38.9%)
-Rank 7/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1891, Accuracy: 30357/60000 (50.6%)
+Test set: Average loss: 1.2058, Accuracy: 5084/10000 (50.8%)
+Rank 8/10.
 Train Epoch: 8/40
 Epoch training took 22s.
-Training set: Average loss: 1.4804, Accuracy: 23638/60000 (39.4%)
-Test set: Average loss: 1.5156, Accuracy: 3931/10000 (39.3%)
-Rank 7/10.
+Training set: Average loss: 1.1657, Accuracy: 29613/60000 (49.4%)
+Test set: Average loss: 1.1897, Accuracy: 4967/10000 (49.7%)
+Rank 9/10.
 Train Epoch: 9/40
 Epoch training took 22s.
-Training set: Average loss: 1.4646, Accuracy: 23732/60000 (39.6%)
-Test set: Average loss: 1.5021, Accuracy: 3948/10000 (39.5%)
-Rank 7/10.
+Training set: Average loss: 1.1108, Accuracy: 32176/60000 (53.6%)
+Test set: Average loss: 1.1331, Accuracy: 5374/10000 (53.7%)
+Rank 9/10.
 Train Epoch: 10/40
-Epoch training took 22s.
-Training set: Average loss: 1.3405, Accuracy: 28247/60000 (47.1%)
-Test set: Average loss: 1.3709, Accuracy: 4666/10000 (46.7%)
-Rank 7/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0895, Accuracy: 32211/60000 (53.7%)
+Test set: Average loss: 1.1151, Accuracy: 5360/10000 (53.6%)
+Rank 9/10.
 Train Epoch: 11/40
-Epoch training took 22s.
-Training set: Average loss: 1.2603, Accuracy: 28630/60000 (47.7%)
-Test set: Average loss: 1.2897, Accuracy: 4798/10000 (48.0%)
-Rank 7/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0802, Accuracy: 32492/60000 (54.2%)
+Test set: Average loss: 1.1222, Accuracy: 5404/10000 (54.0%)
+Rank 9/10.
 Train Epoch: 12/40
 Epoch training took 22s.
-Training set: Average loss: 1.243, Accuracy: 28444/60000 (47.4%)
-Test set: Average loss: 1.2762, Accuracy: 4727/10000 (47.3%)
-Rank 7/10.
+Training set: Average loss: 1.046, Accuracy: 33560/60000 (55.9%)
+Test set: Average loss: 1.0965, Accuracy: 5537/10000 (55.4%)
+Rank 9/10.
 Train Epoch: 13/40
 Epoch training took 22s.
-Training set: Average loss: 1.2239, Accuracy: 28994/60000 (48.3%)
-Test set: Average loss: 1.2719, Accuracy: 4799/10000 (48.0%)
-Rank 7/10.
+Training set: Average loss: 1.0443, Accuracy: 34141/60000 (56.9%)
+Test set: Average loss: 1.1042, Accuracy: 5576/10000 (55.8%)
+Rank 9/10.
 Train Epoch: 14/40
-Epoch training took 22s.
-Training set: Average loss: 1.2384, Accuracy: 28797/60000 (48.0%)
-Test set: Average loss: 1.2826, Accuracy: 4775/10000 (47.8%)
-Rank 7/10.
+Epoch training took 23s.
+Training set: Average loss: 1.0129, Accuracy: 35047/60000 (58.4%)
+Test set: Average loss: 1.0802, Accuracy: 5757/10000 (57.6%)
+Rank 9/10.
 Train Epoch: 15/40
-Epoch training took 22s.
-Training set: Average loss: 1.2044, Accuracy: 29251/60000 (48.8%)
-Test set: Average loss: 1.2544, Accuracy: 4794/10000 (47.9%)
-Rank 7/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9916, Accuracy: 35477/60000 (59.1%)
+Test set: Average loss: 1.0557, Accuracy: 5787/10000 (57.9%)
+Rank 9/10.
 Train Epoch: 16/40
 Epoch training took 22s.
-Training set: Average loss: 1.1934, Accuracy: 29268/60000 (48.8%)
-Test set: Average loss: 1.2347, Accuracy: 4833/10000 (48.3%)
-Rank 7/10.
+Training set: Average loss: 0.9952, Accuracy: 35521/60000 (59.2%)
+Test set: Average loss: 1.0489, Accuracy: 5820/10000 (58.2%)
+Rank 9/10.
 Train Epoch: 17/40
 Epoch training took 22s.
-Training set: Average loss: 1.1818, Accuracy: 29456/60000 (49.1%)
-Test set: Average loss: 1.2343, Accuracy: 4850/10000 (48.5%)
-Rank 7/10.
+Training set: Average loss: 0.972, Accuracy: 36356/60000 (60.6%)
+Test set: Average loss: 1.049, Accuracy: 5901/10000 (59.0%)
+Rank 10/10.
 Train Epoch: 18/40
-Epoch training took 22s.
-Training set: Average loss: 1.2043, Accuracy: 29193/60000 (48.7%)
-Test set: Average loss: 1.2661, Accuracy: 4815/10000 (48.1%)
-Rank 7/10.
+Epoch training took 23s.
+Training set: Average loss: 0.957, Accuracy: 36767/60000 (61.3%)
+Test set: Average loss: 1.0302, Accuracy: 5966/10000 (59.7%)
+Rank 9/10.
 Train Epoch: 19/40
-Epoch training took 22s.
-Training set: Average loss: 1.179, Accuracy: 29382/60000 (49.0%)
-Test set: Average loss: 1.243, Accuracy: 4828/10000 (48.3%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9639, Accuracy: 36125/60000 (60.2%)
+Test set: Average loss: 1.0479, Accuracy: 5816/10000 (58.2%)
+Rank 10/10.
 Train Epoch: 20/40
-Epoch training took 22s.
-Training set: Average loss: 1.1791, Accuracy: 29469/60000 (49.1%)
-Test set: Average loss: 1.2484, Accuracy: 4837/10000 (48.4%)
-Rank 7/10.
+Epoch training took 23s.
+Training set: Average loss: 0.937, Accuracy: 37048/60000 (61.7%)
+Test set: Average loss: 1.0308, Accuracy: 5976/10000 (59.8%)
+Rank 10/10.
 Train Epoch: 21/40
 Epoch training took 22s.
-Training set: Average loss: 1.1805, Accuracy: 29432/60000 (49.1%)
-Test set: Average loss: 1.2569, Accuracy: 4818/10000 (48.2%)
-Rank 7/10.
+Training set: Average loss: 0.9465, Accuracy: 37326/60000 (62.2%)
+Test set: Average loss: 1.042, Accuracy: 5986/10000 (59.9%)
+Rank 10/10.
 Train Epoch: 22/40
-Epoch training took 22s.
-Training set: Average loss: 1.1711, Accuracy: 29645/60000 (49.4%)
-Test set: Average loss: 1.2516, Accuracy: 4842/10000 (48.4%)
-Rank 7/10.
+Epoch training took 23s.
+Training set: Average loss: 0.929, Accuracy: 37373/60000 (62.3%)
+Test set: Average loss: 1.0228, Accuracy: 5999/10000 (60.0%)
+Rank 10/10.
 Train Epoch: 23/40
-Epoch training took 22s.
-Training set: Average loss: 1.16, Accuracy: 29739/60000 (49.6%)
-Test set: Average loss: 1.2425, Accuracy: 4842/10000 (48.4%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9278, Accuracy: 37341/60000 (62.2%)
+Test set: Average loss: 1.0316, Accuracy: 5960/10000 (59.6%)
+Rank 10/10.
 Train Epoch: 24/40
-Epoch training took 22s.
-Training set: Average loss: 1.1601, Accuracy: 29734/60000 (49.6%)
-Test set: Average loss: 1.2369, Accuracy: 4841/10000 (48.4%)
-Rank 7/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9189, Accuracy: 37491/60000 (62.5%)
+Test set: Average loss: 1.0183, Accuracy: 5998/10000 (60.0%)
+Rank 10/10.
 Train Epoch: 25/40
 Epoch training took 22s.
-Training set: Average loss: 1.17, Accuracy: 29511/60000 (49.2%)
-Test set: Average loss: 1.2567, Accuracy: 4779/10000 (47.8%)
-Rank 8/10.
+Training set: Average loss: 0.916, Accuracy: 37439/60000 (62.4%)
+Test set: Average loss: 1.0272, Accuracy: 6030/10000 (60.3%)
+Rank 10/10.
 Train Epoch: 26/40
-Epoch training took 22s.
-Training set: Average loss: 1.168, Accuracy: 29755/60000 (49.6%)
-Test set: Average loss: 1.2505, Accuracy: 4871/10000 (48.7%)
-Rank 7/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9014, Accuracy: 37795/60000 (63.0%)
+Test set: Average loss: 1.0125, Accuracy: 6051/10000 (60.5%)
+Rank 10/10.
 Train Epoch: 27/40
-Epoch training took 22s.
-Training set: Average loss: 1.1627, Accuracy: 29561/60000 (49.3%)
-Test set: Average loss: 1.2354, Accuracy: 4820/10000 (48.2%)
-Rank 7/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9101, Accuracy: 37396/60000 (62.3%)
+Test set: Average loss: 1.03, Accuracy: 6003/10000 (60.0%)
+Rank 10/10.
 Train Epoch: 28/40
-Epoch training took 22s.
-Training set: Average loss: 1.1553, Accuracy: 29755/60000 (49.6%)
-Test set: Average loss: 1.2398, Accuracy: 4835/10000 (48.4%)
-Rank 7/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9087, Accuracy: 37511/60000 (62.5%)
+Test set: Average loss: 1.0244, Accuracy: 5970/10000 (59.7%)
+Rank 10/10.
 Train Epoch: 29/40
 Epoch training took 22s.
-Training set: Average loss: 1.152, Accuracy: 29862/60000 (49.8%)
-Test set: Average loss: 1.2434, Accuracy: 4856/10000 (48.6%)
-Rank 7/10.
+Training set: Average loss: 0.92, Accuracy: 37079/60000 (61.8%)
+Test set: Average loss: 1.0355, Accuracy: 5916/10000 (59.2%)
+Rank 10/10.
 Train Epoch: 30/40
-Epoch training took 22s.
-Training set: Average loss: 1.151, Accuracy: 29799/60000 (49.7%)
-Test set: Average loss: 1.2457, Accuracy: 4827/10000 (48.3%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.8993, Accuracy: 37617/60000 (62.7%)
+Test set: Average loss: 1.0314, Accuracy: 5966/10000 (59.7%)
+Rank 10/10.
 Train Epoch: 31/40
-Epoch training took 22s.
-Training set: Average loss: 1.1509, Accuracy: 29941/60000 (49.9%)
-Test set: Average loss: 1.2376, Accuracy: 4856/10000 (48.6%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.881, Accuracy: 38055/60000 (63.4%)
+Test set: Average loss: 1.0201, Accuracy: 6026/10000 (60.3%)
+Rank 10/10.
 Train Epoch: 32/40
-Epoch training took 22s.
-Training set: Average loss: 1.1586, Accuracy: 29845/60000 (49.7%)
-Test set: Average loss: 1.2491, Accuracy: 4842/10000 (48.4%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.8741, Accuracy: 38265/60000 (63.8%)
+Test set: Average loss: 1.0165, Accuracy: 6060/10000 (60.6%)
+Rank 10/10.
 Train Epoch: 33/40
 Epoch training took 22s.
-Training set: Average loss: 1.1528, Accuracy: 29730/60000 (49.5%)
-Test set: Average loss: 1.2436, Accuracy: 4823/10000 (48.2%)
-Rank 7/10.
+Training set: Average loss: 0.8883, Accuracy: 37917/60000 (63.2%)
+Test set: Average loss: 1.0258, Accuracy: 5997/10000 (60.0%)
+Rank 10/10.
 Train Epoch: 34/40
-Epoch training took 22s.
-Training set: Average loss: 1.1478, Accuracy: 29794/60000 (49.7%)
-Test set: Average loss: 1.2361, Accuracy: 4824/10000 (48.2%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.9087, Accuracy: 37582/60000 (62.6%)
+Test set: Average loss: 1.0534, Accuracy: 5926/10000 (59.3%)
+Rank 10/10.
 Train Epoch: 35/40
-Epoch training took 22s.
-Training set: Average loss: 1.1562, Accuracy: 29797/60000 (49.7%)
-Test set: Average loss: 1.2615, Accuracy: 4837/10000 (48.4%)
-Rank 7/10.
+Epoch training took 23s.
+Training set: Average loss: 0.8718, Accuracy: 38185/60000 (63.6%)
+Test set: Average loss: 1.0211, Accuracy: 6042/10000 (60.4%)
+Rank 10/10.
 Train Epoch: 36/40
-Epoch training took 22s.
-Training set: Average loss: 1.1507, Accuracy: 29741/60000 (49.6%)
-Test set: Average loss: 1.2692, Accuracy: 4825/10000 (48.2%)
-Rank 7/10.
+Epoch training took 23s.
+Training set: Average loss: 0.8868, Accuracy: 38140/60000 (63.6%)
+Test set: Average loss: 1.0436, Accuracy: 6016/10000 (60.2%)
+Rank 10/10.
 Train Epoch: 37/40
 Epoch training took 22s.
-Training set: Average loss: 1.1453, Accuracy: 29993/60000 (50.0%)
-Test set: Average loss: 1.2587, Accuracy: 4866/10000 (48.7%)
-Rank 8/10.
+Training set: Average loss: 0.8741, Accuracy: 38265/60000 (63.8%)
+Test set: Average loss: 1.028, Accuracy: 6033/10000 (60.3%)
+Rank 10/10.
 Train Epoch: 38/40
-Epoch training took 22s.
-Training set: Average loss: 1.1491, Accuracy: 29908/60000 (49.8%)
-Test set: Average loss: 1.267, Accuracy: 4816/10000 (48.2%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.8848, Accuracy: 37858/60000 (63.1%)
+Test set: Average loss: 1.0446, Accuracy: 5927/10000 (59.3%)
+Rank 10/10.
 Train Epoch: 39/40
-Epoch training took 22s.
-Training set: Average loss: 1.1522, Accuracy: 29960/60000 (49.9%)
-Test set: Average loss: 1.2633, Accuracy: 4848/10000 (48.5%)
-Rank 8/10.
+Epoch training took 23s.
+Training set: Average loss: 0.8761, Accuracy: 37954/60000 (63.3%)
+Test set: Average loss: 1.0384, Accuracy: 5927/10000 (59.3%)
+Rank 10/10.
 Train Epoch: 40/40
-Epoch training took 22s.
-Training set: Average loss: 1.1417, Accuracy: 30039/60000 (50.1%)
-Test set: Average loss: 1.2659, Accuracy: 4832/10000 (48.3%)
-Rank 8/10.
-Done! Avg time per epoch 22s.
+Epoch training took 23s.
+Training set: Average loss: 0.874, Accuracy: 37941/60000 (63.2%)
+Test set: Average loss: 1.031, Accuracy: 5968/10000 (59.7%)
+Rank 10/10.
+Done! Avg time per epoch 23s.
 Total time 15 min.
 
 For seed 7/10
-{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
+{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'mixtures': 0, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
 Training a model on mnist using cuda and plif activation.
+The model has 137280 trainable parameters.
 Train Epoch: 1/40
 Epoch training took 22s.
-Training set: Average loss: 1.0423, Accuracy: 37823/60000 (63.0%)
-Test set: Average loss: 1.0393, Accuracy: 6335/10000 (63.4%)
-Rank 10/10.
+Training set: Average loss: 2.3041, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3044, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 2/40
 Epoch training took 22s.
-Training set: Average loss: 0.9463, Accuracy: 39237/60000 (65.4%)
-Test set: Average loss: 0.9582, Accuracy: 6560/10000 (65.6%)
-Rank 10/10.
+Training set: Average loss: 2.3015, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3016, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 3/40
-Epoch training took 22s.
-Training set: Average loss: 0.6018, Accuracy: 49784/60000 (83.0%)
-Test set: Average loss: 0.6052, Accuracy: 8375/10000 (83.8%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 4/40
-Epoch training took 22s.
-Training set: Average loss: 0.4282, Accuracy: 53249/60000 (88.7%)
-Test set: Average loss: 0.4338, Accuracy: 8915/10000 (89.2%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 5/40
 Epoch training took 22s.
-Training set: Average loss: 0.3363, Accuracy: 54769/60000 (91.3%)
-Test set: Average loss: 0.3509, Accuracy: 9137/10000 (91.4%)
-Rank 10/10.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 6/40
 Epoch training took 22s.
-Training set: Average loss: 0.2818, Accuracy: 55514/60000 (92.5%)
-Test set: Average loss: 0.3022, Accuracy: 9238/10000 (92.4%)
-Rank 10/10.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 7/40
-Epoch training took 22s.
-Training set: Average loss: 0.2435, Accuracy: 56104/60000 (93.5%)
-Test set: Average loss: 0.2817, Accuracy: 9298/10000 (93.0%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 8/40
-Epoch training took 22s.
-Training set: Average loss: 0.2321, Accuracy: 56217/60000 (93.7%)
-Test set: Average loss: 0.2754, Accuracy: 9294/10000 (92.9%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 9/40
 Epoch training took 22s.
-Training set: Average loss: 0.2127, Accuracy: 56542/60000 (94.2%)
-Test set: Average loss: 0.273, Accuracy: 9313/10000 (93.1%)
-Rank 10/10.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 10/40
 Epoch training took 22s.
-Training set: Average loss: 0.1885, Accuracy: 57005/60000 (95.0%)
-Test set: Average loss: 0.2582, Accuracy: 9332/10000 (93.3%)
-Rank 10/10.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 11/40
-Epoch training took 22s.
-Training set: Average loss: 0.1892, Accuracy: 56966/60000 (94.9%)
-Test set: Average loss: 0.2674, Accuracy: 9344/10000 (93.4%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 12/40
-Epoch training took 22s.
-Training set: Average loss: 0.1723, Accuracy: 57252/60000 (95.4%)
-Test set: Average loss: 0.2611, Accuracy: 9366/10000 (93.7%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 13/40
-Epoch training took 22s.
-Training set: Average loss: 0.1614, Accuracy: 57442/60000 (95.7%)
-Test set: Average loss: 0.2575, Accuracy: 9375/10000 (93.8%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 14/40
 Epoch training took 22s.
-Training set: Average loss: 0.1605, Accuracy: 57389/60000 (95.6%)
-Test set: Average loss: 0.2655, Accuracy: 9358/10000 (93.6%)
-Rank 10/10.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 15/40
-Epoch training took 22s.
-Training set: Average loss: 0.1655, Accuracy: 57258/60000 (95.4%)
-Test set: Average loss: 0.2728, Accuracy: 9343/10000 (93.4%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 16/40
-Epoch training took 22s.
-Training set: Average loss: 0.1483, Accuracy: 57539/60000 (95.9%)
-Test set: Average loss: 0.2707, Accuracy: 9381/10000 (93.8%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 17/40
-Epoch training took 22s.
-Training set: Average loss: 0.1343, Accuracy: 57840/60000 (96.4%)
-Test set: Average loss: 0.2631, Accuracy: 9399/10000 (94.0%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 18/40
 Epoch training took 22s.
-Training set: Average loss: 0.1507, Accuracy: 57523/60000 (95.9%)
-Test set: Average loss: 0.285, Accuracy: 9342/10000 (93.4%)
-Rank 10/10.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 19/40
-Epoch training took 22s.
-Training set: Average loss: 0.1355, Accuracy: 57785/60000 (96.3%)
-Test set: Average loss: 0.2881, Accuracy: 9349/10000 (93.5%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 20/40
-Epoch training took 22s.
-Training set: Average loss: 0.1209, Accuracy: 57988/60000 (96.6%)
-Test set: Average loss: 0.2848, Accuracy: 9365/10000 (93.7%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 21/40
-Epoch training took 22s.
-Training set: Average loss: 0.1305, Accuracy: 57896/60000 (96.5%)
-Test set: Average loss: 0.284, Accuracy: 9375/10000 (93.8%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 22/40
 Epoch training took 22s.
-Training set: Average loss: 0.118, Accuracy: 58072/60000 (96.8%)
-Test set: Average loss: 0.2902, Accuracy: 9369/10000 (93.7%)
-Rank 10/10.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 23/40
-Epoch training took 22s.
-Training set: Average loss: 0.153, Accuracy: 57436/60000 (95.7%)
-Test set: Average loss: 0.3313, Accuracy: 9305/10000 (93.0%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 24/40
-Epoch training took 22s.
-Training set: Average loss: 0.1416, Accuracy: 57684/60000 (96.1%)
-Test set: Average loss: 0.3028, Accuracy: 9326/10000 (93.3%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 25/40
-Epoch training took 22s.
-Training set: Average loss: 0.1101, Accuracy: 58250/60000 (97.1%)
-Test set: Average loss: 0.2955, Accuracy: 9384/10000 (93.8%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 26/40
 Epoch training took 22s.
-Training set: Average loss: 0.1203, Accuracy: 58027/60000 (96.7%)
-Test set: Average loss: 0.3141, Accuracy: 9323/10000 (93.2%)
-Rank 10/10.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 27/40
 Epoch training took 22s.
-Training set: Average loss: 0.1155, Accuracy: 58127/60000 (96.9%)
-Test set: Average loss: 0.317, Accuracy: 9362/10000 (93.6%)
-Rank 10/10.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 28/40
 Epoch training took 22s.
-Training set: Average loss: 0.1126, Accuracy: 58124/60000 (96.9%)
-Test set: Average loss: 0.32, Accuracy: 9332/10000 (93.3%)
-Rank 10/10.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 29/40
 Epoch training took 22s.
-Training set: Average loss: 0.1143, Accuracy: 58164/60000 (96.9%)
-Test set: Average loss: 0.3362, Accuracy: 9349/10000 (93.5%)
-Rank 10/10.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 30/40
-Epoch training took 22s.
-Training set: Average loss: 0.1008, Accuracy: 58356/60000 (97.3%)
-Test set: Average loss: 0.3176, Accuracy: 9380/10000 (93.8%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 31/40
-Epoch training took 22s.
-Training set: Average loss: 0.0899, Accuracy: 58561/60000 (97.6%)
-Test set: Average loss: 0.3198, Accuracy: 9375/10000 (93.8%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 32/40
-Epoch training took 22s.
-Training set: Average loss: 0.1048, Accuracy: 58237/60000 (97.1%)
-Test set: Average loss: 0.3438, Accuracy: 9345/10000 (93.5%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 33/40
-Epoch training took 22s.
-Training set: Average loss: 0.1111, Accuracy: 58130/60000 (96.9%)
-Test set: Average loss: 0.3399, Accuracy: 9313/10000 (93.1%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 34/40
-Epoch training took 22s.
-Training set: Average loss: 0.0939, Accuracy: 58445/60000 (97.4%)
-Test set: Average loss: 0.3379, Accuracy: 9372/10000 (93.7%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 35/40
-Epoch training took 22s.
-Training set: Average loss: 0.0915, Accuracy: 58511/60000 (97.5%)
-Test set: Average loss: 0.3518, Accuracy: 9315/10000 (93.2%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 36/40
-Epoch training took 22s.
-Training set: Average loss: 0.0938, Accuracy: 58483/60000 (97.5%)
-Test set: Average loss: 0.3553, Accuracy: 9364/10000 (93.6%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 37/40
 Epoch training took 22s.
-Training set: Average loss: 0.1011, Accuracy: 58358/60000 (97.3%)
-Test set: Average loss: 0.3732, Accuracy: 9296/10000 (93.0%)
-Rank 10/10.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 38/40
 Epoch training took 22s.
-Training set: Average loss: 0.0892, Accuracy: 58584/60000 (97.6%)
-Test set: Average loss: 0.3516, Accuracy: 9349/10000 (93.5%)
-Rank 10/10.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 39/40
 Epoch training took 22s.
-Training set: Average loss: 0.0966, Accuracy: 58453/60000 (97.4%)
-Test set: Average loss: 0.3642, Accuracy: 9347/10000 (93.5%)
-Rank 10/10.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 40/40
 Epoch training took 22s.
-Training set: Average loss: 0.09, Accuracy: 58505/60000 (97.5%)
-Test set: Average loss: 0.3586, Accuracy: 9361/10000 (93.6%)
-Rank 10/10.
-Done! Avg time per epoch 22s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
+Done! Avg time per epoch 23s.
 Total time 15 min.
 
 For seed 8/10
-{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
+{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'mixtures': 0, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
 Training a model on mnist using cuda and plif activation.
+The model has 137280 trainable parameters.
 Train Epoch: 1/40
-Epoch training took 22s.
-Training set: Average loss: 1.1415, Accuracy: 32639/60000 (54.4%)
-Test set: Average loss: 1.1659, Accuracy: 5376/10000 (53.8%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.7136, Accuracy: 13712/60000 (22.9%)
+Test set: Average loss: 1.7203, Accuracy: 2301/10000 (23.0%)
+Rank 7/10.
 Train Epoch: 2/40
-Epoch training took 22s.
-Training set: Average loss: 0.9341, Accuracy: 37665/60000 (62.8%)
-Test set: Average loss: 0.9602, Accuracy: 6221/10000 (62.2%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.5723, Accuracy: 20109/60000 (33.5%)
+Test set: Average loss: 1.579, Accuracy: 3300/10000 (33.0%)
+Rank 8/10.
 Train Epoch: 3/40
-Epoch training took 22s.
-Training set: Average loss: 0.6956, Accuracy: 45630/60000 (76.0%)
-Test set: Average loss: 0.7183, Accuracy: 7572/10000 (75.7%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.4985, Accuracy: 20929/60000 (34.9%)
+Test set: Average loss: 1.5097, Accuracy: 3481/10000 (34.8%)
+Rank 8/10.
 Train Epoch: 4/40
-Epoch training took 22s.
-Training set: Average loss: 0.5512, Accuracy: 50177/60000 (83.6%)
-Test set: Average loss: 0.583, Accuracy: 8299/10000 (83.0%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.4808, Accuracy: 22777/60000 (38.0%)
+Test set: Average loss: 1.4934, Accuracy: 3761/10000 (37.6%)
+Rank 8/10.
 Train Epoch: 5/40
-Epoch training took 22s.
-Training set: Average loss: 0.5027, Accuracy: 51276/60000 (85.5%)
-Test set: Average loss: 0.5488, Accuracy: 8443/10000 (84.4%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.4353, Accuracy: 24557/60000 (40.9%)
+Test set: Average loss: 1.4458, Accuracy: 4046/10000 (40.5%)
+Rank 8/10.
 Train Epoch: 6/40
-Epoch training took 22s.
-Training set: Average loss: 0.4517, Accuracy: 52013/60000 (86.7%)
-Test set: Average loss: 0.4921, Accuracy: 8596/10000 (86.0%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.4109, Accuracy: 27043/60000 (45.1%)
+Test set: Average loss: 1.421, Accuracy: 4470/10000 (44.7%)
+Rank 8/10.
 Train Epoch: 7/40
 Epoch training took 22s.
-Training set: Average loss: 0.3879, Accuracy: 53450/60000 (89.1%)
-Test set: Average loss: 0.4449, Accuracy: 8807/10000 (88.1%)
-Rank 10/10.
+Training set: Average loss: 1.3795, Accuracy: 24384/60000 (40.6%)
+Test set: Average loss: 1.3854, Accuracy: 4117/10000 (41.2%)
+Rank 8/10.
 Train Epoch: 8/40
 Epoch training took 22s.
-Training set: Average loss: 0.418, Accuracy: 52522/60000 (87.5%)
-Test set: Average loss: 0.476, Accuracy: 8651/10000 (86.5%)
-Rank 10/10.
+Training set: Average loss: 1.3365, Accuracy: 27412/60000 (45.7%)
+Test set: Average loss: 1.3532, Accuracy: 4494/10000 (44.9%)
+Rank 8/10.
 Train Epoch: 9/40
 Epoch training took 22s.
-Training set: Average loss: 0.3969, Accuracy: 52918/60000 (88.2%)
-Test set: Average loss: 0.4698, Accuracy: 8732/10000 (87.3%)
-Rank 10/10.
+Training set: Average loss: 1.3241, Accuracy: 25719/60000 (42.9%)
+Test set: Average loss: 1.348, Accuracy: 4267/10000 (42.7%)
+Rank 8/10.
 Train Epoch: 10/40
 Epoch training took 22s.
-Training set: Average loss: 0.3414, Accuracy: 54169/60000 (90.3%)
-Test set: Average loss: 0.4317, Accuracy: 8888/10000 (88.9%)
-Rank 10/10.
+Training set: Average loss: 1.3062, Accuracy: 28053/60000 (46.8%)
+Test set: Average loss: 1.3315, Accuracy: 4598/10000 (46.0%)
+Rank 8/10.
 Train Epoch: 11/40
 Epoch training took 22s.
-Training set: Average loss: 0.3156, Accuracy: 54533/60000 (90.9%)
-Test set: Average loss: 0.4209, Accuracy: 8906/10000 (89.1%)
-Rank 10/10.
+Training set: Average loss: 1.2942, Accuracy: 27724/60000 (46.2%)
+Test set: Average loss: 1.3135, Accuracy: 4606/10000 (46.1%)
+Rank 8/10.
 Train Epoch: 12/40
-Epoch training took 22s.
-Training set: Average loss: 0.328, Accuracy: 54347/60000 (90.6%)
-Test set: Average loss: 0.4442, Accuracy: 8825/10000 (88.2%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.2805, Accuracy: 28552/60000 (47.6%)
+Test set: Average loss: 1.3036, Accuracy: 4792/10000 (47.9%)
+Rank 8/10.
 Train Epoch: 13/40
-Epoch training took 22s.
-Training set: Average loss: 0.2588, Accuracy: 55694/60000 (92.8%)
-Test set: Average loss: 0.37, Accuracy: 9053/10000 (90.5%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.2518, Accuracy: 28468/60000 (47.4%)
+Test set: Average loss: 1.2893, Accuracy: 4694/10000 (46.9%)
+Rank 8/10.
 Train Epoch: 14/40
-Epoch training took 22s.
-Training set: Average loss: 0.262, Accuracy: 55581/60000 (92.6%)
-Test set: Average loss: 0.3897, Accuracy: 8997/10000 (90.0%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.2359, Accuracy: 27923/60000 (46.5%)
+Test set: Average loss: 1.2706, Accuracy: 4580/10000 (45.8%)
+Rank 9/10.
 Train Epoch: 15/40
-Epoch training took 22s.
-Training set: Average loss: 0.2471, Accuracy: 55859/60000 (93.1%)
-Test set: Average loss: 0.3858, Accuracy: 9056/10000 (90.6%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.229, Accuracy: 28646/60000 (47.7%)
+Test set: Average loss: 1.2685, Accuracy: 4701/10000 (47.0%)
+Rank 9/10.
 Train Epoch: 16/40
-Epoch training took 22s.
-Training set: Average loss: 0.2507, Accuracy: 55686/60000 (92.8%)
-Test set: Average loss: 0.3924, Accuracy: 8995/10000 (90.0%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.2052, Accuracy: 27977/60000 (46.6%)
+Test set: Average loss: 1.2452, Accuracy: 4612/10000 (46.1%)
+Rank 9/10.
 Train Epoch: 17/40
 Epoch training took 22s.
-Training set: Average loss: 0.2273, Accuracy: 56101/60000 (93.5%)
-Test set: Average loss: 0.3811, Accuracy: 9073/10000 (90.7%)
-Rank 10/10.
+Training set: Average loss: 1.2108, Accuracy: 29229/60000 (48.7%)
+Test set: Average loss: 1.2492, Accuracy: 4813/10000 (48.1%)
+Rank 9/10.
 Train Epoch: 18/40
 Epoch training took 22s.
-Training set: Average loss: 0.2133, Accuracy: 56381/60000 (94.0%)
-Test set: Average loss: 0.3644, Accuracy: 9122/10000 (91.2%)
-Rank 10/10.
+Training set: Average loss: 1.2004, Accuracy: 28367/60000 (47.3%)
+Test set: Average loss: 1.2405, Accuracy: 4643/10000 (46.4%)
+Rank 9/10.
 Train Epoch: 19/40
 Epoch training took 22s.
-Training set: Average loss: 0.2281, Accuracy: 56060/60000 (93.4%)
-Test set: Average loss: 0.3858, Accuracy: 9071/10000 (90.7%)
-Rank 10/10.
+Training set: Average loss: 1.2169, Accuracy: 27918/60000 (46.5%)
+Test set: Average loss: 1.258, Accuracy: 4568/10000 (45.7%)
+Rank 9/10.
 Train Epoch: 20/40
 Epoch training took 22s.
-Training set: Average loss: 0.2108, Accuracy: 56350/60000 (93.9%)
-Test set: Average loss: 0.3707, Accuracy: 9107/10000 (91.1%)
-Rank 10/10.
+Training set: Average loss: 1.2053, Accuracy: 28895/60000 (48.2%)
+Test set: Average loss: 1.2392, Accuracy: 4767/10000 (47.7%)
+Rank 8/10.
 Train Epoch: 21/40
 Epoch training took 22s.
-Training set: Average loss: 0.1996, Accuracy: 56518/60000 (94.2%)
-Test set: Average loss: 0.3754, Accuracy: 9109/10000 (91.1%)
-Rank 10/10.
+Training set: Average loss: 1.1833, Accuracy: 28665/60000 (47.8%)
+Test set: Average loss: 1.2256, Accuracy: 4701/10000 (47.0%)
+Rank 9/10.
 Train Epoch: 22/40
-Epoch training took 22s.
-Training set: Average loss: 0.1884, Accuracy: 56749/60000 (94.6%)
-Test set: Average loss: 0.3594, Accuracy: 9157/10000 (91.6%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1797, Accuracy: 28399/60000 (47.3%)
+Test set: Average loss: 1.223, Accuracy: 4650/10000 (46.5%)
+Rank 9/10.
 Train Epoch: 23/40
-Epoch training took 22s.
-Training set: Average loss: 0.1917, Accuracy: 56690/60000 (94.5%)
-Test set: Average loss: 0.3868, Accuracy: 9114/10000 (91.1%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1635, Accuracy: 28604/60000 (47.7%)
+Test set: Average loss: 1.2135, Accuracy: 4694/10000 (46.9%)
+Rank 8/10.
 Train Epoch: 24/40
-Epoch training took 22s.
-Training set: Average loss: 0.1701, Accuracy: 57084/60000 (95.1%)
-Test set: Average loss: 0.3533, Accuracy: 9190/10000 (91.9%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1639, Accuracy: 28966/60000 (48.3%)
+Test set: Average loss: 1.2186, Accuracy: 4728/10000 (47.3%)
+Rank 9/10.
 Train Epoch: 25/40
-Epoch training took 22s.
-Training set: Average loss: 0.1913, Accuracy: 56594/60000 (94.3%)
-Test set: Average loss: 0.404, Accuracy: 9096/10000 (91.0%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1676, Accuracy: 28688/60000 (47.8%)
+Test set: Average loss: 1.2225, Accuracy: 4663/10000 (46.6%)
+Rank 8/10.
 Train Epoch: 26/40
 Epoch training took 22s.
-Training set: Average loss: 0.1581, Accuracy: 57271/60000 (95.5%)
-Test set: Average loss: 0.3703, Accuracy: 9159/10000 (91.6%)
-Rank 10/10.
+Training set: Average loss: 1.1662, Accuracy: 28811/60000 (48.0%)
+Test set: Average loss: 1.2236, Accuracy: 4690/10000 (46.9%)
+Rank 9/10.
 Train Epoch: 27/40
 Epoch training took 22s.
-Training set: Average loss: 0.1656, Accuracy: 57077/60000 (95.1%)
-Test set: Average loss: 0.3929, Accuracy: 9103/10000 (91.0%)
-Rank 10/10.
+Training set: Average loss: 1.1562, Accuracy: 29289/60000 (48.8%)
+Test set: Average loss: 1.2126, Accuracy: 4775/10000 (47.8%)
+Rank 9/10.
 Train Epoch: 28/40
 Epoch training took 22s.
-Training set: Average loss: 0.1532, Accuracy: 57322/60000 (95.5%)
-Test set: Average loss: 0.3888, Accuracy: 9143/10000 (91.4%)
-Rank 10/10.
+Training set: Average loss: 1.1586, Accuracy: 28389/60000 (47.3%)
+Test set: Average loss: 1.2114, Accuracy: 4613/10000 (46.1%)
+Rank 8/10.
 Train Epoch: 29/40
 Epoch training took 22s.
-Training set: Average loss: 0.1603, Accuracy: 57159/60000 (95.3%)
-Test set: Average loss: 0.3963, Accuracy: 9088/10000 (90.9%)
-Rank 10/10.
+Training set: Average loss: 1.1491, Accuracy: 29834/60000 (49.7%)
+Test set: Average loss: 1.2155, Accuracy: 4900/10000 (49.0%)
+Rank 9/10.
 Train Epoch: 30/40
 Epoch training took 22s.
-Training set: Average loss: 0.1462, Accuracy: 57443/60000 (95.7%)
-Test set: Average loss: 0.4025, Accuracy: 9140/10000 (91.4%)
-Rank 10/10.
+Training set: Average loss: 1.1369, Accuracy: 29066/60000 (48.4%)
+Test set: Average loss: 1.1999, Accuracy: 4756/10000 (47.6%)
+Rank 8/10.
 Train Epoch: 31/40
 Epoch training took 22s.
-Training set: Average loss: 0.1429, Accuracy: 57584/60000 (96.0%)
-Test set: Average loss: 0.402, Accuracy: 9172/10000 (91.7%)
-Rank 10/10.
+Training set: Average loss: 1.1555, Accuracy: 28527/60000 (47.5%)
+Test set: Average loss: 1.2171, Accuracy: 4638/10000 (46.4%)
+Rank 8/10.
 Train Epoch: 32/40
 Epoch training took 22s.
-Training set: Average loss: 0.1563, Accuracy: 57278/60000 (95.5%)
-Test set: Average loss: 0.4365, Accuracy: 9105/10000 (91.0%)
-Rank 10/10.
+Training set: Average loss: 1.1427, Accuracy: 29286/60000 (48.8%)
+Test set: Average loss: 1.2015, Accuracy: 4796/10000 (48.0%)
+Rank 8/10.
 Train Epoch: 33/40
-Epoch training took 22s.
-Training set: Average loss: 0.1388, Accuracy: 57601/60000 (96.0%)
-Test set: Average loss: 0.4048, Accuracy: 9162/10000 (91.6%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1335, Accuracy: 30163/60000 (50.3%)
+Test set: Average loss: 1.1892, Accuracy: 4948/10000 (49.5%)
+Rank 9/10.
 Train Epoch: 34/40
-Epoch training took 22s.
-Training set: Average loss: 0.1437, Accuracy: 57389/60000 (95.6%)
-Test set: Average loss: 0.4192, Accuracy: 9132/10000 (91.3%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1607, Accuracy: 28828/60000 (48.0%)
+Test set: Average loss: 1.2174, Accuracy: 4691/10000 (46.9%)
+Rank 9/10.
 Train Epoch: 35/40
-Epoch training took 22s.
-Training set: Average loss: 0.1214, Accuracy: 57903/60000 (96.5%)
-Test set: Average loss: 0.4146, Accuracy: 9160/10000 (91.6%)
-Rank 10/10.
+Epoch training took 23s.
+Training set: Average loss: 1.1292, Accuracy: 30035/60000 (50.1%)
+Test set: Average loss: 1.195, Accuracy: 4900/10000 (49.0%)
+Rank 9/10.
 Train Epoch: 36/40
 Epoch training took 22s.
-Training set: Average loss: 0.137, Accuracy: 57674/60000 (96.1%)
-Test set: Average loss: 0.4361, Accuracy: 9113/10000 (91.1%)
-Rank 10/10.
+Training set: Average loss: 1.1403, Accuracy: 30881/60000 (51.5%)
+Test set: Average loss: 1.214, Accuracy: 5052/10000 (50.5%)
+Rank 9/10.
 Train Epoch: 37/40
 Epoch training took 22s.
-Training set: Average loss: 0.144, Accuracy: 57479/60000 (95.8%)
-Test set: Average loss: 0.4568, Accuracy: 9101/10000 (91.0%)
-Rank 10/10.
+Training set: Average loss: 1.1199, Accuracy: 29375/60000 (49.0%)
+Test set: Average loss: 1.1996, Accuracy: 4792/10000 (47.9%)
+Rank 9/10.
 Train Epoch: 38/40
 Epoch training took 22s.
-Training set: Average loss: 0.1291, Accuracy: 57762/60000 (96.3%)
-Test set: Average loss: 0.4455, Accuracy: 9145/10000 (91.5%)
-Rank 10/10.
+Training set: Average loss: 1.1279, Accuracy: 31598/60000 (52.7%)
+Test set: Average loss: 1.2025, Accuracy: 5119/10000 (51.2%)
+Rank 9/10.
 Train Epoch: 39/40
 Epoch training took 22s.
-Training set: Average loss: 0.1134, Accuracy: 58062/60000 (96.8%)
-Test set: Average loss: 0.4257, Accuracy: 9154/10000 (91.5%)
-Rank 10/10.
+Training set: Average loss: 1.1305, Accuracy: 29433/60000 (49.1%)
+Test set: Average loss: 1.2054, Accuracy: 4755/10000 (47.5%)
+Rank 8/10.
 Train Epoch: 40/40
 Epoch training took 22s.
-Training set: Average loss: 0.1095, Accuracy: 58140/60000 (96.9%)
-Test set: Average loss: 0.44, Accuracy: 9148/10000 (91.5%)
-Rank 10/10.
+Training set: Average loss: 1.1255, Accuracy: 31166/60000 (51.9%)
+Test set: Average loss: 1.1968, Accuracy: 5078/10000 (50.8%)
+Rank 8/10.
 Done! Avg time per epoch 22s.
 Total time 15 min.
 
 For seed 9/10
-{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
+{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'mixtures': 0, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
 Training a model on mnist using cuda and plif activation.
+The model has 137280 trainable parameters.
 Train Epoch: 1/40
 Epoch training took 22s.
-Training set: Average loss: 2.3032, Accuracy: 5918/60000 (9.9%)
-Test set: Average loss: 2.3035, Accuracy: 958/10000 (9.6%)
+Training set: Average loss: 2.304, Accuracy: 5918/60000 (9.9%)
+Test set: Average loss: 2.3043, Accuracy: 958/10000 (9.6%)
 Rank 1/10.
 Train Epoch: 2/40
-Epoch training took 22s.
+Epoch training took 23s.
 Training set: Average loss: 2.3013, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3013, Accuracy: 1135/10000 (11.3%)
+Test set: Average loss: 2.3014, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 3/40
-Epoch training took 22s.
+Epoch training took 23s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 4/40
-Epoch training took 22s.
+Epoch training took 23s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 5/40
-Epoch training took 22s.
+Epoch training took 23s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
 Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 6/40
 Epoch training took 22s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 7/40
 Epoch training took 22s.
-Training set: Average loss: 2.3013, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 8/40
 Epoch training took 22s.
@@ -1697,12 +1706,12 @@ Rank 1/10.
 Train Epoch: 10/40
 Epoch training took 22s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 11/40
-Epoch training took 22s.
+Epoch training took 23s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 12/40
 Epoch training took 22s.
@@ -1710,24 +1719,24 @@ Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
 Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 13/40
-Epoch training took 22s.
+Epoch training took 23s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 14/40
-Epoch training took 22s.
+Epoch training took 23s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 15/40
-Epoch training took 22s.
+Epoch training took 23s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 16/40
 Epoch training took 22s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 17/40
 Epoch training took 22s.
@@ -1737,7 +1746,7 @@ Rank 1/10.
 Train Epoch: 18/40
 Epoch training took 22s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 19/40
 Epoch training took 22s.
@@ -1752,12 +1761,12 @@ Rank 1/10.
 Train Epoch: 21/40
 Epoch training took 22s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 22/40
 Epoch training took 22s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 23/40
 Epoch training took 22s.
@@ -1765,19 +1774,19 @@ Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
 Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 24/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
-Train Epoch: 25/40
-Epoch training took 22s.
+Epoch training took 23s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
 Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
-Train Epoch: 26/40
-Epoch training took 22s.
+Train Epoch: 25/40
+Epoch training took 23s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
 Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
+Train Epoch: 26/40
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 27/40
 Epoch training took 22s.
@@ -1797,42 +1806,42 @@ Rank 1/10.
 Train Epoch: 30/40
 Epoch training took 22s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 31/40
 Epoch training took 22s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 32/40
-Epoch training took 22s.
+Epoch training took 23s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
 Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 33/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
-Train Epoch: 34/40
-Epoch training took 22s.
+Epoch training took 23s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
 Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
+Train Epoch: 34/40
+Epoch training took 23s.
+Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
+Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Rank 1/10.
 Train Epoch: 35/40
-Epoch training took 22s.
+Epoch training took 23s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
 Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 36/40
-Epoch training took 22s.
+Epoch training took 23s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 37/40
 Epoch training took 22s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Train Epoch: 38/40
 Epoch training took 22s.
@@ -1847,214 +1856,215 @@ Rank 1/10.
 Train Epoch: 40/40
 Epoch training took 22s.
 Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
+Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
 Rank 1/10.
 Done! Avg time per epoch 22s.
 Total time 15 min.
 
 For seed 10/10
-{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
+{'experiment_name': 'mnist_plif_2', 'dataset': 'mnist', 'activation': 'plif', 'compute': 'cuda', 'epochs': 40, 'd': 2, 'batch_size': 64, 'test_batch_size': 10000, 'mixtures': 0, 'num_seeds': 10, 'save_dir': 'experiments/mnist'}
 Training a model on mnist using cuda and plif activation.
+The model has 137280 trainable parameters.
 Train Epoch: 1/40
 Epoch training took 22s.
-Training set: Average loss: 2.304, Accuracy: 5851/60000 (9.8%)
-Test set: Average loss: 2.3038, Accuracy: 974/10000 (9.7%)
-Rank 1/10.
+Training set: Average loss: 1.3478, Accuracy: 25499/60000 (42.5%)
+Test set: Average loss: 1.3618, Accuracy: 4147/10000 (41.5%)
+Rank 9/10.
 Train Epoch: 2/40
-Epoch training took 22s.
-Training set: Average loss: 2.3014, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3012, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.8612, Accuracy: 37995/60000 (63.3%)
+Test set: Average loss: 0.8751, Accuracy: 6273/10000 (62.7%)
+Rank 10/10.
 Train Epoch: 3/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.5098, Accuracy: 49417/60000 (82.4%)
+Test set: Average loss: 0.5367, Accuracy: 8176/10000 (81.8%)
+Rank 10/10.
 Train Epoch: 4/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.3376, Accuracy: 55092/60000 (91.8%)
+Test set: Average loss: 0.3634, Accuracy: 9151/10000 (91.5%)
+Rank 10/10.
 Train Epoch: 5/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.2468, Accuracy: 56150/60000 (93.6%)
+Test set: Average loss: 0.2848, Accuracy: 9262/10000 (92.6%)
+Rank 10/10.
 Train Epoch: 6/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.2211, Accuracy: 56516/60000 (94.2%)
+Test set: Average loss: 0.2717, Accuracy: 9318/10000 (93.2%)
+Rank 10/10.
 Train Epoch: 7/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.2028, Accuracy: 56599/60000 (94.3%)
+Test set: Average loss: 0.2627, Accuracy: 9267/10000 (92.7%)
+Rank 10/10.
 Train Epoch: 8/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.1691, Accuracy: 57221/60000 (95.4%)
+Test set: Average loss: 0.2321, Accuracy: 9377/10000 (93.8%)
+Rank 10/10.
 Train Epoch: 9/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.1575, Accuracy: 57460/60000 (95.8%)
+Test set: Average loss: 0.2327, Accuracy: 9410/10000 (94.1%)
+Rank 10/10.
 Train Epoch: 10/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.141, Accuracy: 57686/60000 (96.1%)
+Test set: Average loss: 0.2307, Accuracy: 9419/10000 (94.2%)
+Rank 10/10.
 Train Epoch: 11/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.1466, Accuracy: 57531/60000 (95.9%)
+Test set: Average loss: 0.2426, Accuracy: 9357/10000 (93.6%)
+Rank 10/10.
 Train Epoch: 12/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1227, Accuracy: 58040/60000 (96.7%)
+Test set: Average loss: 0.2309, Accuracy: 9424/10000 (94.2%)
+Rank 10/10.
 Train Epoch: 13/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3012, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1201, Accuracy: 58039/60000 (96.7%)
+Test set: Average loss: 0.2355, Accuracy: 9404/10000 (94.0%)
+Rank 10/10.
 Train Epoch: 14/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1107, Accuracy: 58187/60000 (97.0%)
+Test set: Average loss: 0.2305, Accuracy: 9435/10000 (94.3%)
+Rank 10/10.
 Train Epoch: 15/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.1056, Accuracy: 58339/60000 (97.2%)
+Test set: Average loss: 0.2326, Accuracy: 9430/10000 (94.3%)
+Rank 10/10.
 Train Epoch: 16/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.0942, Accuracy: 58527/60000 (97.5%)
+Test set: Average loss: 0.2287, Accuracy: 9448/10000 (94.5%)
+Rank 10/10.
 Train Epoch: 17/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.0994, Accuracy: 58321/60000 (97.2%)
+Test set: Average loss: 0.2381, Accuracy: 9394/10000 (93.9%)
+Rank 10/10.
 Train Epoch: 18/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.0928, Accuracy: 58488/60000 (97.5%)
+Test set: Average loss: 0.2527, Accuracy: 9382/10000 (93.8%)
+Rank 10/10.
 Train Epoch: 19/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.0931, Accuracy: 58503/60000 (97.5%)
+Test set: Average loss: 0.2368, Accuracy: 9423/10000 (94.2%)
+Rank 10/10.
 Train Epoch: 20/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.0903, Accuracy: 58548/60000 (97.6%)
+Test set: Average loss: 0.2516, Accuracy: 9403/10000 (94.0%)
+Rank 10/10.
 Train Epoch: 21/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.086, Accuracy: 58647/60000 (97.7%)
+Test set: Average loss: 0.2463, Accuracy: 9415/10000 (94.2%)
+Rank 10/10.
 Train Epoch: 22/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.0866, Accuracy: 58603/60000 (97.7%)
+Test set: Average loss: 0.2612, Accuracy: 9381/10000 (93.8%)
+Rank 10/10.
 Train Epoch: 23/40
-Epoch training took 22s.
-Training set: Average loss: 2.3013, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3012, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.0761, Accuracy: 58828/60000 (98.0%)
+Test set: Average loss: 0.2498, Accuracy: 9435/10000 (94.3%)
+Rank 10/10.
 Train Epoch: 24/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.0743, Accuracy: 58873/60000 (98.1%)
+Test set: Average loss: 0.2499, Accuracy: 9420/10000 (94.2%)
+Rank 10/10.
 Train Epoch: 25/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.0817, Accuracy: 58658/60000 (97.8%)
+Test set: Average loss: 0.2681, Accuracy: 9379/10000 (93.8%)
+Rank 10/10.
 Train Epoch: 26/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.0673, Accuracy: 58984/60000 (98.3%)
+Test set: Average loss: 0.2659, Accuracy: 9395/10000 (94.0%)
+Rank 10/10.
 Train Epoch: 27/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3012, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.0699, Accuracy: 58937/60000 (98.2%)
+Test set: Average loss: 0.2581, Accuracy: 9419/10000 (94.2%)
+Rank 10/10.
 Train Epoch: 28/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.0664, Accuracy: 58994/60000 (98.3%)
+Test set: Average loss: 0.2657, Accuracy: 9410/10000 (94.1%)
+Rank 10/10.
 Train Epoch: 29/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.0719, Accuracy: 58849/60000 (98.1%)
+Test set: Average loss: 0.2774, Accuracy: 9367/10000 (93.7%)
+Rank 10/10.
 Train Epoch: 30/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.0719, Accuracy: 58837/60000 (98.1%)
+Test set: Average loss: 0.2753, Accuracy: 9394/10000 (93.9%)
+Rank 10/10.
 Train Epoch: 31/40
 Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Training set: Average loss: 0.0711, Accuracy: 58893/60000 (98.2%)
+Test set: Average loss: 0.2732, Accuracy: 9376/10000 (93.8%)
+Rank 10/10.
 Train Epoch: 32/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.064, Accuracy: 58989/60000 (98.3%)
+Test set: Average loss: 0.2744, Accuracy: 9384/10000 (93.8%)
+Rank 10/10.
 Train Epoch: 33/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.0625, Accuracy: 59012/60000 (98.4%)
+Test set: Average loss: 0.2664, Accuracy: 9408/10000 (94.1%)
+Rank 10/10.
 Train Epoch: 34/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.0548, Accuracy: 59211/60000 (98.7%)
+Test set: Average loss: 0.2622, Accuracy: 9408/10000 (94.1%)
+Rank 10/10.
 Train Epoch: 35/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.301, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.06, Accuracy: 59094/60000 (98.5%)
+Test set: Average loss: 0.2753, Accuracy: 9395/10000 (94.0%)
+Rank 10/10.
 Train Epoch: 36/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.0557, Accuracy: 59156/60000 (98.6%)
+Test set: Average loss: 0.2904, Accuracy: 9375/10000 (93.8%)
+Rank 10/10.
 Train Epoch: 37/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 24s.
+Training set: Average loss: 0.052, Accuracy: 59238/60000 (98.7%)
+Test set: Average loss: 0.2815, Accuracy: 9409/10000 (94.1%)
+Rank 10/10.
 Train Epoch: 38/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 23s.
+Training set: Average loss: 0.0547, Accuracy: 59195/60000 (98.7%)
+Test set: Average loss: 0.287, Accuracy: 9399/10000 (94.0%)
+Rank 10/10.
 Train Epoch: 39/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
+Epoch training took 25s.
+Training set: Average loss: 0.0527, Accuracy: 59216/60000 (98.7%)
+Test set: Average loss: 0.2757, Accuracy: 9404/10000 (94.0%)
+Rank 10/10.
 Train Epoch: 40/40
-Epoch training took 22s.
-Training set: Average loss: 2.3012, Accuracy: 6742/60000 (11.2%)
-Test set: Average loss: 2.3011, Accuracy: 1135/10000 (11.3%)
-Rank 1/10.
-Done! Avg time per epoch 22s.
+Epoch training took 23s.
+Training set: Average loss: 0.0581, Accuracy: 59098/60000 (98.5%)
+Test set: Average loss: 0.2997, Accuracy: 9332/10000 (93.3%)
+Rank 10/10.
+Done! Avg time per epoch 23s.
 Total time 15 min.
 
