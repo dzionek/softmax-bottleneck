@@ -86,7 +86,10 @@ def run_experiment(seed, args, network, dataset1, dataset2):
     train_loader = torch.utils.data.DataLoader(dataset1, **train_kwargs)
     test_loader = torch.utils.data.DataLoader(dataset2, **test_kwargs)
 
-    model = network(d=args.d).to(device)
+    if args.mixtures:
+        model = network(d=args.d, M=args.mixtures).to(device)
+    else:
+        model = network(d=args.d).to(device)
 
     stats['log'].append(f'The model has'
                         f' {sum(p.numel() for p in model.parameters() if p.requires_grad)}'

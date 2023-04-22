@@ -39,3 +39,18 @@ do
   done
 done
 
+# Impact of the number of mixtures
+EXPERIMENTS_DIR="experiments/mixtures"
+MS=('10' '20' '30' '40' '50' '60' '70' '80' '90' '100' '110' '120' '130' '140' '150' '160' '170' '180' '190' '200')
+
+for m in "${MS[@]}"
+do
+  NAME="inat_mos_k100_d4_m${m}"
+  if test -f "${EXPERIMENTS_DIR}/${NAME}_log"; then
+    echo "Skipping. ${NAME} already exists."
+  else
+    printf "#!/bin/bash\n/usr/bin/python main.py ${NAME} inat mos -c cuda -e 200 -d 4 -s 10 -b 128 -t 10000 -m $m --save_dir ${EXPERIMENTS_DIR}" >> ${NAME}.sh
+    sbatch --time=7:00:00 --gres=gpu:1 ${NAME}.sh
+    rm -rf ${NAME}.sh
+  fi
+done
