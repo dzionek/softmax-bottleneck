@@ -1,6 +1,6 @@
 # Alleviating the Low-Rank Softmax Bottleneck
 
-The code complementing my undergraduate thesis "Alleviating the Low-Rank Softmax Bottleneck".
+The code complementing my undergraduate thesis ["Alleviating the Low-Rank Softmax Bottleneck"](http://dx.doi.org/10.13140/RG.2.2.10923.92965).
 
 ## How to reproduce results
 1. Load [conda](https://docs.conda.io/en/latest/) environment or install libraries on your own.
